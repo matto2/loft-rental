@@ -1,12 +1,64 @@
 ---
 import Layout from "../layouts/MyLayout.astro";
+import Grid from "../components/Grid.astro";
 ---
 
 <Layout title="The LOFT">
-  <p class="text-blue-500 underline">
+  <!-- <p class="text-blue-500 underline">
     <a
       href="https://docs.google.com/presentation/d/e/2PACX-1vRQpvC-MJ656ITRHD6F2u3myYdcRkF7yAtrhtn4mGjgn-mOQCoEgpApA503roSdpdZgAnULX133bZ_I/pub?start=true&loop=false&delayms=3000"
       >See slideshow here</a
-    >
-  </p>
+    > -->
+
+  <h3 class="text-3xl font-bold text-purple-500 py-4">
+    Enjoy the comfort of Santa Cruz living in the cozy loft!
+  </h3>
+  <ul class="list-disc mb-6 list-outside ml-4">
+    <li class="mb-2">
+      High ceilings and plenty of natural light for an open and inviting feel.
+    </li>
+    <li class="mb-2">
+      Convenient mudroom with washer, dryer, and storage for easy beach gear and
+      laundry management.
+    </li>
+    <li class="mb-2">
+      Walking distance to downtown Santa Cruz for great dining and shopping
+      opportunities.
+    </li>
+    <li class="mb-2">
+      Just 1.5 miles away from beaches, wharf, and boardwalk for a day of sun
+      and fun.
+    </li>
+    <li class="mb-2">
+      Choose between separate sleeping areas upstairs or downstairs.
+    </li>
+    <li class="mb-2">
+      Stay connected with complimentary Wi-Fi throughout the property.
+    </li>
+    <li class="mb-2">
+      Relax in the newly renovated bathroom with a deep soaker bathtub and
+      shower.
+    </li>
+    <li class="mb-2">
+      Flexible dining options with a kitchen table or peninsula in the open
+      floor plan.
+    </li>
+    <li class="mb-2">
+      Surrounding tall trees provide a peaceful atmosphere on the patio.
+    </li>
+    <!-- <li class="mb-2">Healthcare facilities nearby:
+      <ul>
+        <li class="mb-2">Sutter/PAMF Urgent Care Westside: 0.6 miles away.</li>
+        <li class="mb-2">Santa Cruz Main Clinic: 2.5 miles away.</li>
+        <li class="mb-2">Dominican Hospital: 4 miles away.</li>
+      </ul>
+    </li> -->
+  </ul>
+  <a
+    href="/application.pdf"
+    class="inline-block px-4 py-2 bg-violet-600 text-white font-bold rounded-lg mb-8 hover:bg-red-700 hover:text-white transition-colors duration-300"
+  >
+    Download application
+  </a>
+  <Grid />
 </Layout>
