@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/MyLayout.astro";
 import Grid from "../components/Grid.astro";
+import Contact from "../components/Contact.astro";
 ---
 
 <Layout title="The LOFT on King Street">
@@ -13,7 +14,7 @@ import Grid from "../components/Grid.astro";
   <h3 class="text-3xl font-bold text-purple-500 py-4">
     Enjoy the comfort of Santa Cruz living in the cozy loft!
   </h3>
-  <ul class="list-disc mb-6 list-outside ml-4">
+  <ul class="list-disc list-outside ml-4 mb-8">
     <li class="mb-2">
       High ceilings and plenty of natural light for an open and inviting feel.
     </li>
@@ -49,6 +50,12 @@ import Grid from "../components/Grid.astro";
     <li class="mb-2">
       Surrounding tall trees provide a peaceful atmosphere on the patio.
     </li>
+    <li class="mb-2">
+      <a
+        href="https://www.places4students.com/Landlord/HousingView?HousingID=Gcvs5V3r07Y%3d"
+        class="text-violet-500 underline">Listing on places4students</a
+      >
+    </li>
     <!-- <li class="mb-2">Healthcare facilities nearby:
       <ul>
         <li class="mb-2">Sutter/PAMF Urgent Care Westside: 0.6 miles away.</li>
@@ -57,48 +64,10 @@ import Grid from "../components/Grid.astro";
       </ul>
     </li> -->
   </ul>
-  <p class="mb-2 text-2xl font-bold">Reach out to us to schedule a tour!</p>
-  <p class="mb-2">
-    Fill out the form below, or call/text Matt at (831) 275-2566
-  </p>
-  <form
-    name="contact"
-    netlify
-    class="max-w-md p-6 mb-12 bg-white shadow-md rounded-lg"
-  >
-    <p class="mb-4">
-      <label class="block text-gray-700 font-semibold mb-2">
-        Name
-        <input
-          type="text"
-          name="name"
-          class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-teal-500"
-        />
-      </label>
-    </p>
-    <p class="mb-4">
-      <label class="block text-gray-700 font-semibold mb-2">
-        Email
-        <input
-          type="email"
-          name="email"
-          class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-teal-500"
-        />
-      </label>
-    </p>
-    <p>
-      <button
-        type="submit"
-        class="w-full bg-violet-600 text-white py-2 px-4 font-bold rounded-full hover:bg-red-700 transition text-lg"
-      >
-        Send
-      </button>
-    </p>
-  </form>
-
+  <!-- <Contact /> -->
   <a
     href="/application.pdf"
-    class="inline-block px-12 py-2 bg-violet-600 text-white font-bold text-lg rounded-full my-8 hover:bg-red-700 hover:text-white transition-colors duration-300"
+    class="inline-block px-12 py-2 bg-violet-600 text-white font-bold text-lg rounded-full mb-12 hover:bg-red-700 hover:text-white transition-colors duration-300"
   >
     Download application
   </a>
