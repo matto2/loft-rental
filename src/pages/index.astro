@@ -20,26 +20,26 @@ import heroImg from "../assets/IMG_0312.jpeg";
       sizes="100vw"
     />
     <!-- Gradient: subtle top to rich bottom -->
-    <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-black/20 to-black/70"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black/85"></div>
 
     <!-- Hero text: bottom-centered -->
     <div class="absolute inset-0 flex flex-col items-center justify-end pb-14 px-6 text-center text-white">
-      <p class="font-sans text-[10px] tracking-[0.5em] uppercase text-white/60 mb-5">
+      <p class="font-sans text-[10px] tracking-[0.5em] uppercase text-white/90 mb-5">
         Santa Cruz, California
       </p>
       <h1 class="font-display font-light text-6xl sm:text-7xl md:text-8xl lg:text-9xl leading-[0.9] tracking-wide mb-6">
         The Loft<br /><em>on King Street</em>
       </h1>
       <div class="flex items-center gap-4 mb-12">
-        <div class="h-px w-12 bg-white/30"></div>
-        <p class="font-sans text-[10px] tracking-[0.4em] uppercase text-white/50">
+        <div class="h-px w-12 bg-white/50"></div>
+        <p class="font-sans text-[10px] tracking-[0.4em] uppercase text-white/80">
           Private &nbsp;·&nbsp; Renovated &nbsp;·&nbsp; Freestanding
         </p>
-        <div class="h-px w-12 bg-white/30"></div>
+        <div class="h-px w-12 bg-white/50"></div>
       </div>
       <a
         href="#about"
-        class="font-sans text-[10px] tracking-[0.35em] uppercase text-white/70 hover:text-white border-b border-white/30 hover:border-white/70 pb-0.5 transition-all duration-300"
+        class="font-sans text-[10px] tracking-[0.35em] uppercase text-white border-b border-white/60 hover:border-white pb-0.5 transition-all duration-300"
       >
         Discover the space ↓
       </a>
@@ -50,14 +50,14 @@ import heroImg from "../assets/IMG_0312.jpeg";
        INTRO
   ═══════════════════════════════════════════ -->
   <section id="about" class="max-w-3xl mx-auto px-6 py-28 text-center">
-    <p class="font-sans text-[10px] tracking-[0.5em] uppercase text-stone-400 mb-6">
+    <p class="font-sans text-[10px] tracking-[0.5em] uppercase text-stone-500 mb-6">
       Available for Rent
     </p>
     <h2 class="font-display font-light text-4xl md:text-5xl leading-tight text-charcoal mb-8">
       Comfort, privacy, and the<br /><em>best of Santa Cruz</em>
     </h2>
     <div class="rule-bronze mb-8"></div>
-    <p class="font-sans font-light text-stone-500 text-[15px] leading-loose max-w-xl mx-auto">
+    <p class="font-sans text-stone-700 text-base leading-loose max-w-xl mx-auto">
       Nestled among tall trees on King Street, this beautifully renovated loft offers
       soaring ceilings, an open floor plan, and the tranquility of a private freestanding
       unit — all within walking distance of downtown dining and just 1.1 miles from the beach.
@@ -71,29 +71,74 @@ import heroImg from "../assets/IMG_0312.jpeg";
     <div class="max-w-4xl mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-4 divide-x divide-stone-200 text-center">
       <div class="px-4 sm:px-8">
         <p class="font-display font-light text-4xl sm:text-5xl text-charcoal">1.1<span class="text-2xl">mi</span></p>
-        <p class="font-sans text-[10px] tracking-[0.35em] uppercase text-stone-400 mt-2">To the Beach</p>
+        <p class="font-sans text-[10px] tracking-[0.35em] uppercase text-stone-600 mt-2">To the Beach</p>
       </div>
       <div class="px-4 sm:px-8">
         <p class="font-display font-light text-4xl sm:text-5xl text-charcoal">1.4<span class="text-2xl">mi</span></p>
-        <p class="font-sans text-[10px] tracking-[0.35em] uppercase text-stone-400 mt-2">To UCSC</p>
+        <p class="font-sans text-[10px] tracking-[0.35em] uppercase text-stone-600 mt-2">To UCSC</p>
       </div>
       <div class="px-4 sm:px-8 border-t md:border-t-0 border-stone-200">
         <p class="font-display font-light text-4xl sm:text-5xl text-charcoal">2</p>
-        <p class="font-sans text-[10px] tracking-[0.35em] uppercase text-stone-400 mt-2">Sleeping Areas</p>
+        <p class="font-sans text-[10px] tracking-[0.35em] uppercase text-stone-600 mt-2">Sleeping Areas</p>
       </div>
       <div class="px-4 sm:px-8 border-t md:border-t-0 border-stone-200">
-        <p class="font-display font-light text-4xl sm:text-5xl text-charcoal">∞</p>
-        <p class="font-sans text-[10px] tracking-[0.35em] uppercase text-stone-400 mt-2">Natural Light</p>
+        <p class="font-display font-light text-4xl sm:text-5xl text-charcoal">480<span class="text-2xl">ft²</span></p>
+        <p class="font-sans text-[10px] tracking-[0.35em] uppercase text-stone-600 mt-2">Square Feet</p>
       </div>
     </div>
   </div>
+
+  <!-- ═══════════════════════════════════════════
+       RENTAL DETAILS
+  ═══════════════════════════════════════════ -->
+  <section class="max-w-3xl mx-auto px-6 py-24">
+    <div class="text-center mb-14">
+      <p class="font-sans text-[10px] tracking-[0.5em] uppercase text-stone-500 mb-4">Rental Details</p>
+      <h2 class="font-display font-light text-3xl md:text-4xl text-charcoal">The essentials</h2>
+    </div>
+
+    <dl class="divide-y divide-stone-200">
+      <div class="flex justify-between items-baseline py-4">
+        <dt class="font-sans text-[10px] tracking-[0.3em] uppercase text-stone-500">Monthly Rent</dt>
+        <dd class="font-display text-2xl font-light text-charcoal">$3,450 <span class="font-sans text-sm text-stone-500 tracking-wide">/ month</span></dd>
+      </div>
+      <div class="flex justify-between items-baseline py-4">
+        <dt class="font-sans text-[10px] tracking-[0.3em] uppercase text-stone-500">Available</dt>
+        <dd class="font-display text-2xl font-light text-charcoal">July 1, 2026</dd>
+      </div>
+      <div class="flex justify-between items-baseline py-4">
+        <dt class="font-sans text-[10px] tracking-[0.3em] uppercase text-stone-500">Lease Term</dt>
+        <dd class="font-display text-2xl font-light text-charcoal">1 Year</dd>
+      </div>
+      <div class="flex justify-between items-baseline py-4">
+        <dt class="font-sans text-[10px] tracking-[0.3em] uppercase text-stone-500">Security Deposit</dt>
+        <dd class="font-display text-2xl font-light text-charcoal">$3,450</dd>
+      </div>
+      <div class="flex justify-between items-baseline py-4">
+        <dt class="font-sans text-[10px] tracking-[0.3em] uppercase text-stone-500">Type</dt>
+        <dd class="font-display text-2xl font-light text-charcoal">Loft &nbsp;·&nbsp; <span class="text-xl">1 Bath &nbsp;·&nbsp; ~480 sq ft</span></dd>
+      </div>
+      <div class="flex justify-between items-baseline py-4">
+        <dt class="font-sans text-[10px] tracking-[0.3em] uppercase text-stone-500">Utilities</dt>
+        <dd class="font-sans text-base text-charcoal text-right">Water, electric &amp; gas included<br/><span class="text-stone-500 text-sm">Cable, internet &amp; phone not included</span></dd>
+      </div>
+      <div class="flex justify-between items-baseline py-4">
+        <dt class="font-sans text-[10px] tracking-[0.3em] uppercase text-stone-500">Parking</dt>
+        <dd class="font-sans text-base text-charcoal">Street parking available</dd>
+      </div>
+      <div class="flex justify-between items-baseline py-4">
+        <dt class="font-sans text-[10px] tracking-[0.3em] uppercase text-stone-500">Pets</dt>
+        <dd class="font-sans text-base text-charcoal">Cats welcome</dd>
+      </div>
+    </dl>
+  </section>
 
   <!-- ═══════════════════════════════════════════
        AMENITIES
   ═══════════════════════════════════════════ -->
   <section class="max-w-5xl mx-auto px-6 py-28">
     <div class="text-center mb-16">
-      <p class="font-sans text-[10px] tracking-[0.5em] uppercase text-stone-400 mb-4">The Details</p>
+      <p class="font-sans text-[10px] tracking-[0.5em] uppercase text-stone-500 mb-4">The Details</p>
       <h2 class="font-display font-light text-3xl md:text-4xl text-charcoal">Everything you need</h2>
     </div>
 
@@ -110,7 +155,7 @@ import heroImg from "../assets/IMG_0312.jpeg";
           </svg>
         </div>
         <h3 class="font-display text-xl font-light text-charcoal mb-2">High Ceilings &amp; Natural Light</h3>
-        <p class="font-sans font-light text-sm text-stone-400 leading-relaxed">Open, airy atmosphere with soaring ceilings and abundant windows throughout.</p>
+        <p class="font-sans text-[15px] text-stone-600 leading-relaxed">Open, airy atmosphere with soaring ceilings and abundant windows throughout.</p>
       </div>
 
       <!-- Beach -->
@@ -122,7 +167,7 @@ import heroImg from "../assets/IMG_0312.jpeg";
           </svg>
         </div>
         <h3 class="font-display text-xl font-light text-charcoal mb-2">1.1 Miles to the Beach</h3>
-        <p class="font-sans font-light text-sm text-stone-400 leading-relaxed">Beaches, the wharf, and the boardwalk are all just 1.1 miles away.</p>
+        <p class="font-sans text-[15px] text-stone-600 leading-relaxed">Beaches, the wharf, and the boardwalk are all just 1.1 miles away.</p>
       </div>
 
       <!-- Downtown -->
@@ -133,7 +178,7 @@ import heroImg from "../assets/IMG_0312.jpeg";
           </svg>
         </div>
         <h3 class="font-display text-xl font-light text-charcoal mb-2">Walking Distance to Downtown</h3>
-        <p class="font-sans font-light text-sm text-stone-400 leading-relaxed">World-class dining, boutiques, and the best of Santa Cruz just steps away.</p>
+        <p class="font-sans text-[15px] text-stone-600 leading-relaxed">World-class dining, boutiques, and the best of Santa Cruz just steps away.</p>
       </div>
 
       <!-- Sleeping Areas -->
@@ -145,7 +190,7 @@ import heroImg from "../assets/IMG_0312.jpeg";
           </svg>
         </div>
         <h3 class="font-display text-xl font-light text-charcoal mb-2">Flexible Sleeping Areas</h3>
-        <p class="font-sans font-light text-sm text-stone-400 leading-relaxed">Separate sleeping quarters both upstairs and downstairs for privacy and versatility.</p>
+        <p class="font-sans text-[15px] text-stone-600 leading-relaxed">Separate sleeping quarters both upstairs and downstairs for privacy and versatility.</p>
       </div>
 
       <!-- Bathroom -->
@@ -158,7 +203,7 @@ import heroImg from "../assets/IMG_0312.jpeg";
           </svg>
         </div>
         <h3 class="font-display text-xl font-light text-charcoal mb-2">Renovated Soaker Tub &amp; Shower</h3>
-        <p class="font-sans font-light text-sm text-stone-400 leading-relaxed">Newly renovated bathroom with a deep soaker bathtub and separate shower.</p>
+        <p class="font-sans text-[15px] text-stone-600 leading-relaxed">Newly renovated bathroom with a deep soaker bathtub and separate shower.</p>
       </div>
 
       <!-- Laundry -->
@@ -171,7 +216,7 @@ import heroImg from "../assets/IMG_0312.jpeg";
           </svg>
         </div>
         <h3 class="font-display text-xl font-light text-charcoal mb-2">In-Unit Washer &amp; Dryer</h3>
-        <p class="font-sans font-light text-sm text-stone-400 leading-relaxed">Private mudroom with full-size washer, dryer, and ample storage for beach gear.</p>
+        <p class="font-sans text-[15px] text-stone-600 leading-relaxed">Private mudroom with full-size washer, dryer, and ample storage for beach gear.</p>
       </div>
 
       <!-- Private Unit -->
@@ -183,7 +228,7 @@ import heroImg from "../assets/IMG_0312.jpeg";
           </svg>
         </div>
         <h3 class="font-display text-xl font-light text-charcoal mb-2">Private Freestanding Unit</h3>
-        <p class="font-sans font-light text-sm text-stone-400 leading-relaxed">Enjoy complete privacy in your own separate, standalone home — no shared walls.</p>
+        <p class="font-sans text-[15px] text-stone-600 leading-relaxed">Enjoy complete privacy in your own separate, standalone home — no shared walls.</p>
       </div>
 
       <!-- Patio -->
@@ -195,7 +240,7 @@ import heroImg from "../assets/IMG_0312.jpeg";
           </svg>
         </div>
         <h3 class="font-display text-xl font-light text-charcoal mb-2">Private Patio &amp; Tall Trees</h3>
-        <p class="font-sans font-light text-sm text-stone-400 leading-relaxed">A peaceful outdoor retreat surrounded by towering trees and dappled light.</p>
+        <p class="font-sans text-[15px] text-stone-600 leading-relaxed">A peaceful outdoor retreat surrounded by towering trees and dappled light.</p>
       </div>
 
     </div>
@@ -206,7 +251,7 @@ import heroImg from "../assets/IMG_0312.jpeg";
   ═══════════════════════════════════════════ -->
   <section class="pb-32">
     <div class="max-w-4xl mx-auto px-6 mb-14 text-center">
-      <p class="font-sans text-[10px] tracking-[0.5em] uppercase text-stone-400 mb-4">The Space</p>
+      <p class="font-sans text-[10px] tracking-[0.5em] uppercase text-stone-500 mb-4">The Space</p>
       <h2 class="font-display font-light text-3xl md:text-4xl text-charcoal">
         <em>A closer look</em>
       </h2>
@@ -219,13 +264,13 @@ import heroImg from "../assets/IMG_0312.jpeg";
        CTA
   ═══════════════════════════════════════════ -->
   <section class="bg-charcoal text-white py-28 px-6 text-center">
-    <p class="font-sans text-[10px] tracking-[0.5em] uppercase text-white/40 mb-6">
+    <p class="font-sans text-[10px] tracking-[0.5em] uppercase text-white/70 mb-6">
       Ready to apply?
     </p>
     <h2 class="font-display font-light text-4xl md:text-5xl lg:text-6xl mb-4">
       Make it yours.
     </h2>
-    <p class="font-display italic font-light text-xl text-white/50 mb-14">
+    <p class="font-display italic font-light text-xl text-white/75 mb-14">
       The Loft on King Street · Santa Cruz, CA
     </p>
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
@@ -241,6 +286,20 @@ import heroImg from "../assets/IMG_0312.jpeg";
       >
         View on Places4Students
       </a>
+    </div>
+
+    <div class="mt-16 pt-16 border-t border-white/10">
+      <p class="font-sans text-[10px] tracking-[0.4em] uppercase text-white/50 mb-5">Get in touch</p>
+      <p class="font-display italic font-light text-2xl text-white mb-5">Matthew O'Leary</p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-8">
+        <a href="tel:8312752566" class="font-sans text-sm text-white/80 hover:text-white transition-colors duration-300 tracking-wide">
+          831-275-2566 <span class="text-white/40 text-xs ml-1">call or text</span>
+        </a>
+        <div class="hidden sm:block h-3 w-px bg-white/20"></div>
+        <a href="mailto:mattosurf@gmail.com" class="font-sans text-sm text-white/80 hover:text-white transition-colors duration-300 tracking-wide">
+          mattosurf@gmail.com
+        </a>
+      </div>
     </div>
   </section>
 
