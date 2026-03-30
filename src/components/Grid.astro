@@ -1,46 +1,120 @@
 ---
-import { Image } from "astro:assets";
-import image1 from "../assets/IMG_0312.jpeg";
-import image2 from "../assets/IMG_0262.jpeg";
-import image3 from "../assets/IMG_0263.jpeg";
-import image4 from "../assets/IMG_0265.jpeg";
-import image5 from "../assets/IMG_0269.jpeg";
-import image6 from "../assets/IMG_0273.jpeg";
-import image7 from "../assets/IMG_0275.jpeg";
-import image8 from "../assets/IMG_0276.jpeg";
-import image9 from "../assets/IMG_0278.jpeg";
-import image10 from "../assets/IMG_0283.jpeg";
-import image11 from "../assets/IMG_0286.jpeg";
-import image12 from "../assets/IMG_0288.jpeg";
-import image13 from "../assets/IMG_0291.jpeg";
-import image14 from "../assets/IMG_0293.jpeg";
-import image15 from "../assets/IMG_0294.jpeg";
-import image16 from "../assets/IMG_0301.jpeg";
-import image17 from "../assets/IMG_0302.jpeg";
-import image18 from "../assets/IMG_0309.jpeg";
-import image20 from "../assets/washer-dryer.jpg";
+import { Image, getImage } from "astro:assets";
+import img1  from "../assets/IMG_0312.jpeg";
+import img2  from "../assets/IMG_0262.jpeg";
+import img3  from "../assets/IMG_0263.jpeg";
+import img4  from "../assets/IMG_0265.jpeg";
+import img5  from "../assets/IMG_0269.jpeg";
+import img6  from "../assets/IMG_0273.jpeg";
+import img7  from "../assets/IMG_0275.jpeg";
+import img8  from "../assets/IMG_0276.jpeg";
+import img9  from "../assets/IMG_0278.jpeg";
+import img10 from "../assets/IMG_0283.jpeg";
+import img11 from "../assets/IMG_0286.jpeg";
+import img12 from "../assets/IMG_0288.jpeg";
+import img13 from "../assets/IMG_0291.jpeg";
+import img14 from "../assets/IMG_0293.jpeg";
+import img15 from "../assets/IMG_0294.jpeg";
+import img16 from "../assets/IMG_0301.jpeg";
+import img17 from "../assets/IMG_0302.jpeg";
+import img18 from "../assets/IMG_0309.jpeg";
+import img19 from "../assets/washer-dryer.jpg";
+
+// Generate full-size lightbox URLs for each image
+const allImgs = [img1,img2,img3,img4,img5,img6,img7,img8,img9,img10,img11,img12,img13,img14,img15,img16,img17,img18,img19];
+const lbSrcs = await Promise.all(
+  allImgs.map(img => getImage({ src: img, width: 2400, format: "webp" }).then(r => r.src))
+);
+const [l1,l2,l3,l4,l5,l6,l7,l8,l9,l10,l11,l12,l13,l14,l15,l16,l17,l18,l19] = lbSrcs;
 ---
 
-<div
-  class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
->
-  <Image src={image1} alt="house image 1" />
-  <Image src={image2} alt="house image 2" />
-  <Image src={image3} alt="house image 3" />
-  <Image src={image4} alt="house image 4" />
-  <Image src={image5} alt="house image 5" />
-  <Image src={image6} alt="house image 6" />
-  <Image src={image7} alt="house image 7" />
-  <Image src={image8} alt="house image 8" />
-  <Image src={image9} alt="house image 9" />
-  <Image src={image10} alt="house image 10" />
-  <Image src={image11} alt="house image 11" />
-  <Image src={image12} alt="house image 12" />
-  <Image src={image13} alt="house image 13" />
-  <Image src={image14} alt="house image 14" />
-  <Image src={image15} alt="house image 15" />
-  <Image src={image16} alt="house image 16" />
-  <Image src={image17} alt="house image 17" />
-  <Image src={image18} alt="house image 18" />
-  <Image src={image20} alt="house image 20" />
+<div class="grid grid-cols-2 md:grid-cols-12 gap-1 px-1">
+
+  <!-- Row 1 -->
+  <a href={l1} class="glightbox col-span-2 md:col-span-8 h-56 sm:h-72 md:h-80 gallery-item" data-gallery="loft">
+    <Image src={img1}  alt="The Loft on King Street" widths={[800,1200]} sizes="(min-width:768px) 66vw, 100vw" />
+  </a>
+  <a href={l2} class="glightbox col-span-2 md:col-span-4 h-56 sm:h-72 md:h-80 gallery-item" data-gallery="loft">
+    <Image src={img2}  alt="Interior living space" widths={[600,900]} sizes="(min-width:768px) 33vw, 100vw" />
+  </a>
+
+  <!-- Row 2 -->
+  <a href={l3} class="glightbox col-span-1 md:col-span-4 h-52 md:h-72 gallery-item" data-gallery="loft">
+    <Image src={img3}  alt="Interior detail" widths={[500,800]} sizes="(min-width:768px) 33vw, 50vw" />
+  </a>
+  <a href={l4} class="glightbox col-span-1 md:col-span-4 h-52 md:h-72 gallery-item" data-gallery="loft">
+    <Image src={img4}  alt="Interior detail" widths={[500,800]} sizes="(min-width:768px) 33vw, 50vw" />
+  </a>
+  <a href={l5} class="glightbox col-span-2 md:col-span-4 h-52 md:h-72 gallery-item" data-gallery="loft">
+    <Image src={img5}  alt="Interior detail" widths={[500,800]} sizes="(min-width:768px) 33vw, 100vw" />
+  </a>
+
+  <!-- Row 3 -->
+  <a href={l6} class="glightbox col-span-2 md:col-span-4 h-56 md:h-80 gallery-item" data-gallery="loft">
+    <Image src={img6}  alt="Interior room" widths={[600,900]} sizes="(min-width:768px) 33vw, 100vw" />
+  </a>
+  <a href={l7} class="glightbox col-span-2 md:col-span-8 h-56 md:h-80 gallery-item" data-gallery="loft">
+    <Image src={img7}  alt="Interior living area" widths={[800,1200]} sizes="(min-width:768px) 66vw, 100vw" />
+  </a>
+
+  <!-- Row 4 -->
+  <a href={l8} class="glightbox col-span-1 md:col-span-6 h-52 md:h-72 gallery-item" data-gallery="loft">
+    <Image src={img8}  alt="Interior view" widths={[600,1000]} sizes="(min-width:768px) 50vw, 50vw" />
+  </a>
+  <a href={l9} class="glightbox col-span-1 md:col-span-6 h-52 md:h-72 gallery-item" data-gallery="loft">
+    <Image src={img9}  alt="Interior view" widths={[600,1000]} sizes="(min-width:768px) 50vw, 50vw" />
+  </a>
+
+  <!-- Row 5 -->
+  <a href={l10} class="glightbox col-span-1 md:col-span-4 h-52 md:h-72 gallery-item" data-gallery="loft">
+    <Image src={img10} alt="Interior detail" widths={[500,800]} sizes="(min-width:768px) 33vw, 50vw" />
+  </a>
+  <a href={l11} class="glightbox col-span-1 md:col-span-4 h-52 md:h-72 gallery-item" data-gallery="loft">
+    <Image src={img11} alt="Interior detail" widths={[500,800]} sizes="(min-width:768px) 33vw, 50vw" />
+  </a>
+  <a href={l12} class="glightbox col-span-2 md:col-span-4 h-52 md:h-72 gallery-item" data-gallery="loft">
+    <Image src={img12} alt="Interior detail" widths={[500,800]} sizes="(min-width:768px) 33vw, 100vw" />
+  </a>
+
+  <!-- Row 6 -->
+  <a href={l13} class="glightbox col-span-2 md:col-span-8 h-56 md:h-80 gallery-item" data-gallery="loft">
+    <Image src={img13} alt="Interior space" widths={[800,1200]} sizes="(min-width:768px) 66vw, 100vw" />
+  </a>
+  <a href={l14} class="glightbox col-span-2 md:col-span-4 h-56 md:h-80 gallery-item" data-gallery="loft">
+    <Image src={img14} alt="Interior detail" widths={[600,900]} sizes="(min-width:768px) 33vw, 100vw" />
+  </a>
+
+  <!-- Row 7 -->
+  <a href={l15} class="glightbox col-span-1 md:col-span-3 h-48 md:h-64 gallery-item" data-gallery="loft">
+    <Image src={img15} alt="Detail shot" widths={[400,700]} sizes="(min-width:768px) 25vw, 50vw" />
+  </a>
+  <a href={l16} class="glightbox col-span-1 md:col-span-3 h-48 md:h-64 gallery-item" data-gallery="loft">
+    <Image src={img16} alt="Detail shot" widths={[400,700]} sizes="(min-width:768px) 25vw, 50vw" />
+  </a>
+  <a href={l17} class="glightbox col-span-1 md:col-span-3 h-48 md:h-64 gallery-item" data-gallery="loft">
+    <Image src={img17} alt="Detail shot" widths={[400,700]} sizes="(min-width:768px) 25vw, 50vw" />
+  </a>
+  <a href={l18} class="glightbox col-span-1 md:col-span-3 h-48 md:h-64 gallery-item" data-gallery="loft">
+    <Image src={img18} alt="Detail shot" widths={[400,700]} sizes="(min-width:768px) 25vw, 50vw" />
+  </a>
+
+  <!-- Row 8: Full-width -->
+  <a href={l19} class="glightbox col-span-2 md:col-span-12 h-56 md:h-80 gallery-item" data-gallery="loft">
+    <Image src={img19} alt="In-unit washer and dryer" widths={[800,1400,1920]} sizes="100vw" />
+  </a>
+
 </div>
+
+<script>
+  import GLightbox from "glightbox";
+  import "glightbox/dist/css/glightbox.min.css";
+
+  GLightbox({
+    selector: ".glightbox",
+    touchNavigation: true,
+    loop: true,
+    closeButton: true,
+    keyboardNavigation: true,
+    closeOnOutsideClick: true,
+  });
+</script>

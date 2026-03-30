@@ -1,75 +1,247 @@
 ---
+import { Image } from "astro:assets";
 import Layout from "../layouts/MyLayout.astro";
 import Grid from "../components/Grid.astro";
-import Contact from "../components/Contact.astro";
+import heroImg from "../assets/IMG_0312.jpeg";
 ---
 
-<Layout title="The LOFT on King Street">
-  <!-- <p class="text-blue-500 underline">
-    <a
-      href="https://docs.google.com/presentation/d/e/2PACX-1vRQpvC-MJ656ITRHD6F2u3myYdcRkF7yAtrhtn4mGjgn-mOQCoEgpApA503roSdpdZgAnULX133bZ_I/pub?start=true&loop=false&delayms=3000"
-      >See slideshow here</a
-    > -->
+<Layout title="The Loft on King Street · Santa Cruz, CA">
 
-  <h3 class="text-3xl font-bold text-purple-500 py-4">
-    Enjoy the comfort of Santa Cruz living in the cozy loft!
-  </h3>
-  <ul class="list-disc list-outside ml-4 mb-8">
-    <li class="mb-2">
-      High ceilings and plenty of natural light for an open and inviting feel.
-    </li>
-    <li class="mb-2">
-      Convenient mudroom with washer, dryer, and storage for easy beach gear and
-      laundry management.
-    </li>
-    <li class="mb-2">
-      Walking distance to downtown Santa Cruz for great dining and shopping
-      opportunities.
-    </li>
-    <li class="mb-2">
-      Just 1.5 miles away from beaches, wharf, and boardwalk for a day of sun
-      and fun.
-    </li>
-    <li class="mb-2">
-      Choose between separate sleeping areas upstairs or downstairs.
-    </li>
-    <li class="mb-2">
-      Enjoy the privacy of your own separate, freestanding unit.
-    </li>
-    <li class="mb-2">
-      Stay connected with complimentary Wi-Fi throughout the property.
-    </li>
-    <li class="mb-2">
-      Relax in the newly renovated bathroom with a deep soaker bathtub and
-      shower.
-    </li>
-    <li class="mb-2">
-      Flexible dining options with a kitchen table or peninsula in the open
-      floor plan.
-    </li>
-    <li class="mb-2">
-      Surrounding tall trees provide a peaceful atmosphere on the patio.
-    </li>
-    <li class="mb-2">
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════ -->
+  <section class="relative h-screen min-h-[640px] overflow-hidden">
+    <Image
+      src={heroImg}
+      alt="The Loft on King Street, Santa Cruz"
+      class="hero-img"
+      loading="eager"
+      widths={[800, 1200, 1920, 2560]}
+      sizes="100vw"
+    />
+    <!-- Gradient: subtle top to rich bottom -->
+    <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-black/20 to-black/70"></div>
+
+    <!-- Hero text: bottom-centered -->
+    <div class="absolute inset-0 flex flex-col items-center justify-end pb-14 px-6 text-center text-white">
+      <p class="font-sans text-[10px] tracking-[0.5em] uppercase text-white/60 mb-5">
+        Santa Cruz, California
+      </p>
+      <h1 class="font-display font-light text-6xl sm:text-7xl md:text-8xl lg:text-9xl leading-[0.9] tracking-wide mb-6">
+        The Loft<br /><em>on King Street</em>
+      </h1>
+      <div class="flex items-center gap-4 mb-12">
+        <div class="h-px w-12 bg-white/30"></div>
+        <p class="font-sans text-[10px] tracking-[0.4em] uppercase text-white/50">
+          Private &nbsp;·&nbsp; Renovated &nbsp;·&nbsp; Freestanding
+        </p>
+        <div class="h-px w-12 bg-white/30"></div>
+      </div>
+      <a
+        href="#about"
+        class="font-sans text-[10px] tracking-[0.35em] uppercase text-white/70 hover:text-white border-b border-white/30 hover:border-white/70 pb-0.5 transition-all duration-300"
+      >
+        Discover the space ↓
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       INTRO
+  ═══════════════════════════════════════════ -->
+  <section id="about" class="max-w-3xl mx-auto px-6 py-28 text-center">
+    <p class="font-sans text-[10px] tracking-[0.5em] uppercase text-stone-400 mb-6">
+      Available for Rent
+    </p>
+    <h2 class="font-display font-light text-4xl md:text-5xl leading-tight text-charcoal mb-8">
+      Comfort, privacy, and the<br /><em>best of Santa Cruz</em>
+    </h2>
+    <div class="rule-bronze mb-8"></div>
+    <p class="font-sans font-light text-stone-500 text-[15px] leading-loose max-w-xl mx-auto">
+      Nestled among tall trees on King Street, this beautifully renovated loft offers
+      soaring ceilings, an open floor plan, and the tranquility of a private freestanding
+      unit — all within walking distance of downtown dining and just 1.1 miles from the beach.
+    </p>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       STATS BAR
+  ═══════════════════════════════════════════ -->
+  <div class="border-y border-stone-200">
+    <div class="max-w-4xl mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-4 divide-x divide-stone-200 text-center">
+      <div class="px-4 sm:px-8">
+        <p class="font-display font-light text-4xl sm:text-5xl text-charcoal">1.1<span class="text-2xl">mi</span></p>
+        <p class="font-sans text-[10px] tracking-[0.35em] uppercase text-stone-400 mt-2">To the Beach</p>
+      </div>
+      <div class="px-4 sm:px-8">
+        <p class="font-display font-light text-4xl sm:text-5xl text-charcoal">1.4<span class="text-2xl">mi</span></p>
+        <p class="font-sans text-[10px] tracking-[0.35em] uppercase text-stone-400 mt-2">To UCSC</p>
+      </div>
+      <div class="px-4 sm:px-8 border-t md:border-t-0 border-stone-200">
+        <p class="font-display font-light text-4xl sm:text-5xl text-charcoal">2</p>
+        <p class="font-sans text-[10px] tracking-[0.35em] uppercase text-stone-400 mt-2">Sleeping Areas</p>
+      </div>
+      <div class="px-4 sm:px-8 border-t md:border-t-0 border-stone-200">
+        <p class="font-display font-light text-4xl sm:text-5xl text-charcoal">∞</p>
+        <p class="font-sans text-[10px] tracking-[0.35em] uppercase text-stone-400 mt-2">Natural Light</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       AMENITIES
+  ═══════════════════════════════════════════ -->
+  <section class="max-w-5xl mx-auto px-6 py-28">
+    <div class="text-center mb-16">
+      <p class="font-sans text-[10px] tracking-[0.5em] uppercase text-stone-400 mb-4">The Details</p>
+      <h2 class="font-display font-light text-3xl md:text-4xl text-charcoal">Everything you need</h2>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+
+      <!-- Natural Light -->
+      <div class="text-center">
+        <div class="text-bronze w-8 h-8 mx-auto mb-5">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round">
+            <circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/>
+            <line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/>
+            <line x1="4.93" y1="4.93" x2="7.05" y2="7.05"/><line x1="16.95" y1="16.95" x2="19.07" y2="19.07"/>
+            <line x1="19.07" y1="4.93" x2="16.95" y2="7.05"/><line x1="7.05" y1="16.95" x2="4.93" y2="19.07"/>
+          </svg>
+        </div>
+        <h3 class="font-display text-xl font-light text-charcoal mb-2">High Ceilings &amp; Natural Light</h3>
+        <p class="font-sans font-light text-sm text-stone-400 leading-relaxed">Open, airy atmosphere with soaring ceilings and abundant windows throughout.</p>
+      </div>
+
+      <!-- Beach -->
+      <div class="text-center">
+        <div class="text-bronze w-8 h-8 mx-auto mb-5">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round">
+            <path d="M2 18 C5 14 8 16 12 13 S18 10 22 13"/><path d="M2 22 C5 18 8 20 12 17 S18 14 22 17"/>
+            <path d="M12 3 C12 3 9 7 12 11"/><path d="M12 11 C14 8 17 5 16 3"/>
+          </svg>
+        </div>
+        <h3 class="font-display text-xl font-light text-charcoal mb-2">1.1 Miles to the Beach</h3>
+        <p class="font-sans font-light text-sm text-stone-400 leading-relaxed">Beaches, the wharf, and the boardwalk are all just 1.1 miles away.</p>
+      </div>
+
+      <!-- Downtown -->
+      <div class="text-center">
+        <div class="text-bronze w-8 h-8 mx-auto mb-5">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round">
+            <path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/>
+          </svg>
+        </div>
+        <h3 class="font-display text-xl font-light text-charcoal mb-2">Walking Distance to Downtown</h3>
+        <p class="font-sans font-light text-sm text-stone-400 leading-relaxed">World-class dining, boutiques, and the best of Santa Cruz just steps away.</p>
+      </div>
+
+      <!-- Sleeping Areas -->
+      <div class="text-center">
+        <div class="text-bronze w-8 h-8 mx-auto mb-5">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round">
+            <path d="M2 9V6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v3"/><path d="M2 20v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5"/>
+            <path d="M2 20h20"/><path d="M2 9h20"/><path d="M7 13v-2"/><path d="M12 13v-2"/><path d="M17 13v-2"/>
+          </svg>
+        </div>
+        <h3 class="font-display text-xl font-light text-charcoal mb-2">Flexible Sleeping Areas</h3>
+        <p class="font-sans font-light text-sm text-stone-400 leading-relaxed">Separate sleeping quarters both upstairs and downstairs for privacy and versatility.</p>
+      </div>
+
+      <!-- Bathroom -->
+      <div class="text-center">
+        <div class="text-bronze w-8 h-8 mx-auto mb-5">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round">
+            <path d="M9 6 C9 4.34 7.66 3 6 3 S3 4.34 3 6 V12 H21 V10 C21 8.34 19.66 7 18 7 H9 Z"/>
+            <path d="M3 12 L3 17 C3 19.76 5.24 22 8 22 H16 C18.76 22 21 19.76 21 17 V12"/>
+            <path d="M7 22 L7 24"/><path d="M17 22 L17 24"/>
+          </svg>
+        </div>
+        <h3 class="font-display text-xl font-light text-charcoal mb-2">Renovated Soaker Tub &amp; Shower</h3>
+        <p class="font-sans font-light text-sm text-stone-400 leading-relaxed">Newly renovated bathroom with a deep soaker bathtub and separate shower.</p>
+      </div>
+
+      <!-- Laundry -->
+      <div class="text-center">
+        <div class="text-bronze w-8 h-8 mx-auto mb-5">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round">
+            <rect x="2" y="2" width="20" height="20" rx="2"/>
+            <circle cx="12" cy="13" r="5"/><circle cx="12" cy="13" r="2"/>
+            <line x1="6" y1="6" x2="6" y2="6" stroke-width="2"/><line x1="9" y1="6" x2="9" y2="6" stroke-width="2"/>
+          </svg>
+        </div>
+        <h3 class="font-display text-xl font-light text-charcoal mb-2">In-Unit Washer &amp; Dryer</h3>
+        <p class="font-sans font-light text-sm text-stone-400 leading-relaxed">Private mudroom with full-size washer, dryer, and ample storage for beach gear.</p>
+      </div>
+
+      <!-- Private Unit -->
+      <div class="text-center">
+        <div class="text-bronze w-8 h-8 mx-auto mb-5">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round">
+            <path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5z"/>
+            <path d="M9 21V12h6v9"/>
+          </svg>
+        </div>
+        <h3 class="font-display text-xl font-light text-charcoal mb-2">Private Freestanding Unit</h3>
+        <p class="font-sans font-light text-sm text-stone-400 leading-relaxed">Enjoy complete privacy in your own separate, standalone home — no shared walls.</p>
+      </div>
+
+      <!-- Patio -->
+      <div class="text-center">
+        <div class="text-bronze w-8 h-8 mx-auto mb-5">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round">
+            <path d="M12 2 C10 5 8 7 8 10 C8 12.21 9.79 14 12 14 C14.21 14 16 12.21 16 10 C16 7 14 5 12 2Z"/>
+            <path d="M12 14 L12 22"/><path d="M9 18 L12 16 L15 18"/>
+          </svg>
+        </div>
+        <h3 class="font-display text-xl font-light text-charcoal mb-2">Private Patio &amp; Tall Trees</h3>
+        <p class="font-sans font-light text-sm text-stone-400 leading-relaxed">A peaceful outdoor retreat surrounded by towering trees and dappled light.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       GALLERY
+  ═══════════════════════════════════════════ -->
+  <section class="pb-32">
+    <div class="max-w-4xl mx-auto px-6 mb-14 text-center">
+      <p class="font-sans text-[10px] tracking-[0.5em] uppercase text-stone-400 mb-4">The Space</p>
+      <h2 class="font-display font-light text-3xl md:text-4xl text-charcoal">
+        <em>A closer look</em>
+      </h2>
+      <div class="rule-bronze mt-6"></div>
+    </div>
+    <Grid />
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CTA
+  ═══════════════════════════════════════════ -->
+  <section class="bg-charcoal text-white py-28 px-6 text-center">
+    <p class="font-sans text-[10px] tracking-[0.5em] uppercase text-white/40 mb-6">
+      Ready to apply?
+    </p>
+    <h2 class="font-display font-light text-4xl md:text-5xl lg:text-6xl mb-4">
+      Make it yours.
+    </h2>
+    <p class="font-display italic font-light text-xl text-white/50 mb-14">
+      The Loft on King Street · Santa Cruz, CA
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a
+        href="/application.pdf"
+        class="inline-block px-12 py-4 bg-white text-charcoal font-sans text-[10px] tracking-[0.4em] uppercase hover:bg-stone-100 transition-colors duration-300"
+      >
+        Download Application
+      </a>
       <a
         href="https://www.places4students.com/Landlord/HousingView?HousingID=Gcvs5V3r07Y%3d"
-        class="text-violet-500 underline">Listing on places4students</a
+        class="inline-block px-12 py-4 border border-white/25 text-white font-sans text-[10px] tracking-[0.4em] uppercase hover:border-white/60 hover:bg-white/5 transition-all duration-300"
       >
-    </li>
-    <!-- <li class="mb-2">Healthcare facilities nearby:
-      <ul>
-        <li class="mb-2">Sutter/PAMF Urgent Care Westside: 0.6 miles away.</li>
-        <li class="mb-2">Santa Cruz Main Clinic: 2.5 miles away.</li>
-        <li class="mb-2">Dominican Hospital: 4 miles away.</li>
-      </ul>
-    </li> -->
-  </ul>
-  <!-- <Contact /> -->
-  <a
-    href="/application.pdf"
-    class="inline-block px-12 py-2 bg-violet-600 text-white font-bold text-lg rounded-full mb-12 hover:bg-red-700 hover:text-white transition-colors duration-300"
-  >
-    Download application
-  </a>
-  <Grid />
+        View on Places4Students
+      </a>
+    </div>
+  </section>
+
 </Layout>
