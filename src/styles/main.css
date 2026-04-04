@@ -15,16 +15,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Hero image fills container */
-.hero-img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
 /* Gallery image zoom on hover */
 .gallery-item {
   overflow: hidden;

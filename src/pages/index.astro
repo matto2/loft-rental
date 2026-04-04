@@ -2,7 +2,7 @@
 import { Image } from "astro:assets";
 import Layout from "../layouts/MyLayout.astro";
 import Grid from "../components/Grid.astro";
-import heroImg from "../assets/IMG_0312.jpeg";
+import heroImg from "../assets/IMG_0312-LoRes.jpg";
 ---
 
 <Layout title="The Loft on King Street · Santa Cruz, CA">
@@ -10,36 +10,37 @@ import heroImg from "../assets/IMG_0312.jpeg";
   <!-- ═══════════════════════════════════════════
        HERO
   ═══════════════════════════════════════════ -->
-  <section class="relative h-screen min-h-[640px] overflow-hidden">
-    <Image
-      src={heroImg}
-      alt="The Loft on King Street, Santa Cruz"
-      class="hero-img"
-      loading="eager"
-      widths={[800, 1200, 1920, 2560]}
-      sizes="100vw"
-    />
-    <!-- Gradient: subtle top to rich bottom -->
-    <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black/85"></div>
+  <section>
+    <!-- Full-bleed photo, no overlay -->
+    <div class="w-full h-[78vh] min-h-[480px] overflow-hidden">
+      <Image
+        src={heroImg}
+        alt="The Loft on King Street, Santa Cruz"
+        class="w-full h-full object-cover object-center"
+        loading="eager"
+        widths={[800, 1200, 1920, 2560]}
+        sizes="100vw"
+      />
+    </div>
 
-    <!-- Hero text: bottom-centered -->
-    <div class="absolute inset-0 flex flex-col items-center justify-end pb-14 px-6 text-center text-white">
-      <p class="font-sans text-[10px] tracking-[0.5em] uppercase text-white/90 mb-5">
+    <!-- Title block -->
+    <div class="max-w-4xl mx-auto px-6 pt-14 pb-10 text-center">
+      <p class="font-sans text-[10px] tracking-[0.5em] uppercase text-stone-500 mb-5">
         Santa Cruz, California
       </p>
-      <h1 class="font-display font-light text-6xl sm:text-7xl md:text-8xl lg:text-9xl leading-[0.9] tracking-wide mb-6">
+      <h1 class="font-display font-light text-6xl sm:text-7xl md:text-8xl lg:text-9xl leading-[0.9] tracking-wide mb-8 text-charcoal">
         The Loft<br /><em>on King Street</em>
       </h1>
-      <div class="flex items-center gap-4 mb-12">
-        <div class="h-px w-12 bg-white/50"></div>
-        <p class="font-sans text-[10px] tracking-[0.4em] uppercase text-white/80">
+      <div class="flex items-center justify-center gap-4 mb-10">
+        <div class="h-px w-12 bg-stone-300"></div>
+        <p class="font-sans text-[10px] tracking-[0.4em] uppercase text-stone-500">
           Private &nbsp;·&nbsp; Renovated &nbsp;·&nbsp; Freestanding
         </p>
-        <div class="h-px w-12 bg-white/50"></div>
+        <div class="h-px w-12 bg-stone-300"></div>
       </div>
       <a
         href="#about"
-        class="font-sans text-[10px] tracking-[0.35em] uppercase text-white border-b border-white/60 hover:border-white pb-0.5 transition-all duration-300"
+        class="font-sans text-[10px] tracking-[0.35em] uppercase text-charcoal border-b border-charcoal/40 hover:border-charcoal pb-0.5 transition-all duration-300"
       >
         Discover the space ↓
       </a>
@@ -51,16 +52,17 @@ import heroImg from "../assets/IMG_0312.jpeg";
   ═══════════════════════════════════════════ -->
   <section id="about" class="max-w-3xl mx-auto px-6 py-28 text-center">
     <p class="font-sans text-[10px] tracking-[0.5em] uppercase text-stone-500 mb-6">
-      Available for Rent
+      Available July 2026
     </p>
     <h2 class="font-display font-light text-4xl md:text-5xl leading-tight text-charcoal mb-8">
       Comfort, privacy, and the<br /><em>best of Santa Cruz</em>
     </h2>
     <div class="rule-bronze mb-8"></div>
     <p class="font-sans text-stone-700 text-base leading-loose max-w-xl mx-auto">
-      Nestled among tall trees on King Street, this beautifully renovated loft offers
-      soaring ceilings, an open floor plan, and the tranquility of a private freestanding
-      unit — all within walking distance of downtown dining and just 1.1 miles from the beach.
+      A rare find on King Street — a beautifully renovated freestanding loft with soaring
+      ceilings, skylights, and an open floor plan that lives larger than its square footage.
+      Walk to downtown dining, reach the beach in minutes, and come home to your own private
+      unit with all utilities included.
     </p>
   </section>
 
@@ -83,7 +85,7 @@ import heroImg from "../assets/IMG_0312.jpeg";
       </div>
       <div class="px-4 sm:px-8 border-t md:border-t-0 border-stone-200">
         <p class="font-display font-light text-4xl sm:text-5xl text-charcoal">480<span class="text-2xl">ft²</span></p>
-        <p class="font-sans text-[10px] tracking-[0.35em] uppercase text-stone-600 mt-2">Square Feet</p>
+        <p class="font-sans text-[10px] tracking-[0.35em] uppercase text-stone-600 mt-2">Private Loft</p>
       </div>
     </div>
   </div>
@@ -100,7 +102,10 @@ import heroImg from "../assets/IMG_0312.jpeg";
     <dl class="divide-y divide-stone-200">
       <div class="flex justify-between items-baseline py-4">
         <dt class="font-sans text-[10px] tracking-[0.3em] uppercase text-stone-500">Monthly Rent</dt>
-        <dd class="font-display text-2xl font-light text-charcoal">$3,450 <span class="font-sans text-sm text-stone-500 tracking-wide">/ month</span></dd>
+        <dd class="text-right">
+          <span class="font-display text-2xl font-light text-charcoal">$3,195 <span class="font-sans text-sm text-stone-500 tracking-wide">/ month</span></span>
+          <br /><span class="font-sans text-sm text-stone-500">water, electric &amp; gas included</span>
+        </dd>
       </div>
       <div class="flex justify-between items-baseline py-4">
         <dt class="font-sans text-[10px] tracking-[0.3em] uppercase text-stone-500">Available</dt>
@@ -112,7 +117,7 @@ import heroImg from "../assets/IMG_0312.jpeg";
       </div>
       <div class="flex justify-between items-baseline py-4">
         <dt class="font-sans text-[10px] tracking-[0.3em] uppercase text-stone-500">Security Deposit</dt>
-        <dd class="font-display text-2xl font-light text-charcoal">$3,450</dd>
+        <dd class="font-display text-2xl font-light text-charcoal">$3,195</dd>
       </div>
       <div class="flex justify-between items-baseline py-4">
         <dt class="font-sans text-[10px] tracking-[0.3em] uppercase text-stone-500">Type</dt>
@@ -125,6 +130,10 @@ import heroImg from "../assets/IMG_0312.jpeg";
       <div class="flex justify-between items-baseline py-4">
         <dt class="font-sans text-[10px] tracking-[0.3em] uppercase text-stone-500">Parking</dt>
         <dd class="font-sans text-base text-charcoal">Street parking available</dd>
+      </div>
+      <div class="flex justify-between items-baseline py-4">
+        <dt class="font-sans text-[10px] tracking-[0.3em] uppercase text-stone-500">Furnished</dt>
+        <dd class="font-sans text-base text-charcoal text-right">Unfurnished — ready for your personal touch<br/><span class="text-stone-500 text-sm">Partial furnishing available upon request</span></dd>
       </div>
       <div class="flex justify-between items-baseline py-4">
         <dt class="font-sans text-[10px] tracking-[0.3em] uppercase text-stone-500">Pets</dt>

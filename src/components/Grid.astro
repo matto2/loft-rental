@@ -1,106 +1,87 @@
 ---
 import { Image, getImage } from "astro:assets";
-import img1  from "../assets/IMG_0312.jpeg";
-import img2  from "../assets/IMG_0262.jpeg";
-import img3  from "../assets/IMG_0263.jpeg";
-import img4  from "../assets/IMG_0265.jpeg";
-import img5  from "../assets/IMG_0269.jpeg";
-import img6  from "../assets/IMG_0273.jpeg";
+import img1  from "../assets/IMG_0302.jpeg";
+import img2  from "../assets/IMG_0265.jpeg";
+import img3  from "../assets/IMG_0273.jpeg";
+import img4  from "../assets/IMG_0263.jpeg";
+import img5  from "../assets/IMG_0262.jpeg";
+import img6  from "../assets/IMG_0276.jpeg";
 import img7  from "../assets/IMG_0275.jpeg";
-import img8  from "../assets/IMG_0276.jpeg";
-import img9  from "../assets/IMG_0278.jpeg";
-import img10 from "../assets/IMG_0283.jpeg";
-import img11 from "../assets/IMG_0286.jpeg";
-import img12 from "../assets/IMG_0288.jpeg";
-import img13 from "../assets/IMG_0291.jpeg";
-import img14 from "../assets/IMG_0293.jpeg";
-import img15 from "../assets/IMG_0294.jpeg";
-import img16 from "../assets/IMG_0301.jpeg";
-import img17 from "../assets/IMG_0302.jpeg";
-import img18 from "../assets/IMG_0309.jpeg";
-import img19 from "../assets/washer-dryer.jpg";
+import img8  from "../assets/IMG_0294.jpeg";
+import img9  from "../assets/IMG_0301.jpeg";
+import img10 from "../assets/washer-dryer.jpg";
 
-// Generate full-size lightbox URLs for each image
-const allImgs = [img1,img2,img3,img4,img5,img6,img7,img8,img9,img10,img11,img12,img13,img14,img15,img16,img17,img18,img19];
+const photos = [
+  { src: img1,  alt: "Soaring windows and blue sky" },
+  { src: img2,  alt: "Loft sleeping area with skylights" },
+  { src: img3,  alt: "Living room viewed from the loft above" },
+  { src: img4,  alt: "Upstairs loft bedroom" },
+  { src: img5,  alt: "Kitchen and dining area" },
+  { src: img6,  alt: "Renovated kitchen with grey cabinetry" },
+  { src: img7,  alt: "Open kitchen and dining from above" },
+  { src: img8,  alt: "Renovated bathroom with subway tile" },
+  { src: img9,  alt: "Light-filled interior with original artwork" },
+  { src: img10, alt: "In-unit washer and dryer" },
+];
+
 const lbSrcs = await Promise.all(
-  allImgs.map(img => getImage({ src: img, width: 2400, format: "webp" }).then(r => r.src))
+  photos.map(p => getImage({ src: p.src, width: 2400, format: "webp" }).then(r => r.src))
 );
-const [l1,l2,l3,l4,l5,l6,l7,l8,l9,l10,l11,l12,l13,l14,l15,l16,l17,l18,l19] = lbSrcs;
 ---
 
-<div class="grid grid-cols-2 md:grid-cols-12 gap-1 px-1">
+<!-- ── Mobile: Swiper carousel ─────────────────────────────── -->
+<div class="md:hidden swiper gallery-swiper overflow-hidden">
+  <div class="swiper-wrapper">
+    {photos.map((p, i) => (
+      <div class="swiper-slide">
+        <a href={lbSrcs[i]} class="glightbox block w-full h-72 gallery-item" data-gallery="loft">
+          <Image src={p.src} alt={p.alt} class="w-full h-full object-cover" widths={[600,900]} sizes="100vw" />
+        </a>
+      </div>
+    ))}
+  </div>
+  <div class="swiper-pagination"></div>
+</div>
 
-  <!-- Row 1 -->
-  <a href={l1} class="glightbox col-span-2 md:col-span-8 h-56 sm:h-72 md:h-80 gallery-item" data-gallery="loft">
-    <Image src={img1}  alt="The Loft on King Street" widths={[800,1200]} sizes="(min-width:768px) 66vw, 100vw" />
-  </a>
-  <a href={l2} class="glightbox col-span-2 md:col-span-4 h-56 sm:h-72 md:h-80 gallery-item" data-gallery="loft">
-    <Image src={img2}  alt="Interior living space" widths={[600,900]} sizes="(min-width:768px) 33vw, 100vw" />
-  </a>
+<!-- ── Desktop: editorial grid ────────────────────────────── -->
+<div class="hidden md:grid md:grid-cols-12 gap-1 px-1">
 
-  <!-- Row 2 -->
-  <a href={l3} class="glightbox col-span-1 md:col-span-4 h-52 md:h-72 gallery-item" data-gallery="loft">
-    <Image src={img3}  alt="Interior detail" widths={[500,800]} sizes="(min-width:768px) 33vw, 50vw" />
+  <!-- Row 1: Tall windows wide + loft skylights -->
+  <a href={lbSrcs[0]} class="glightbox col-span-8 h-96 gallery-item" data-gallery="loft">
+    <Image src={photos[0].src} alt={photos[0].alt} widths={[800,1200,1800]} sizes="66vw" />
   </a>
-  <a href={l4} class="glightbox col-span-1 md:col-span-4 h-52 md:h-72 gallery-item" data-gallery="loft">
-    <Image src={img4}  alt="Interior detail" widths={[500,800]} sizes="(min-width:768px) 33vw, 50vw" />
-  </a>
-  <a href={l5} class="glightbox col-span-2 md:col-span-4 h-52 md:h-72 gallery-item" data-gallery="loft">
-    <Image src={img5}  alt="Interior detail" widths={[500,800]} sizes="(min-width:768px) 33vw, 100vw" />
-  </a>
-
-  <!-- Row 3 -->
-  <a href={l6} class="glightbox col-span-2 md:col-span-4 h-56 md:h-80 gallery-item" data-gallery="loft">
-    <Image src={img6}  alt="Interior room" widths={[600,900]} sizes="(min-width:768px) 33vw, 100vw" />
-  </a>
-  <a href={l7} class="glightbox col-span-2 md:col-span-8 h-56 md:h-80 gallery-item" data-gallery="loft">
-    <Image src={img7}  alt="Interior living area" widths={[800,1200]} sizes="(min-width:768px) 66vw, 100vw" />
+  <a href={lbSrcs[1]} class="glightbox col-span-4 h-96 gallery-item" data-gallery="loft">
+    <Image src={photos[1].src} alt={photos[1].alt} widths={[600,900]} sizes="33vw" />
   </a>
 
-  <!-- Row 4 -->
-  <a href={l8} class="glightbox col-span-1 md:col-span-6 h-52 md:h-72 gallery-item" data-gallery="loft">
-    <Image src={img8}  alt="Interior view" widths={[600,1000]} sizes="(min-width:768px) 50vw, 50vw" />
+  <!-- Row 2: Three loft/living shots -->
+  <a href={lbSrcs[2]} class="glightbox col-span-4 h-80 gallery-item" data-gallery="loft">
+    <Image src={photos[2].src} alt={photos[2].alt} widths={[600,900]} sizes="33vw" />
   </a>
-  <a href={l9} class="glightbox col-span-1 md:col-span-6 h-52 md:h-72 gallery-item" data-gallery="loft">
-    <Image src={img9}  alt="Interior view" widths={[600,1000]} sizes="(min-width:768px) 50vw, 50vw" />
+  <a href={lbSrcs[3]} class="glightbox col-span-4 h-80 gallery-item" data-gallery="loft">
+    <Image src={photos[3].src} alt={photos[3].alt} widths={[600,900]} sizes="33vw" />
   </a>
-
-  <!-- Row 5 -->
-  <a href={l10} class="glightbox col-span-1 md:col-span-4 h-52 md:h-72 gallery-item" data-gallery="loft">
-    <Image src={img10} alt="Interior detail" widths={[500,800]} sizes="(min-width:768px) 33vw, 50vw" />
-  </a>
-  <a href={l11} class="glightbox col-span-1 md:col-span-4 h-52 md:h-72 gallery-item" data-gallery="loft">
-    <Image src={img11} alt="Interior detail" widths={[500,800]} sizes="(min-width:768px) 33vw, 50vw" />
-  </a>
-  <a href={l12} class="glightbox col-span-2 md:col-span-4 h-52 md:h-72 gallery-item" data-gallery="loft">
-    <Image src={img12} alt="Interior detail" widths={[500,800]} sizes="(min-width:768px) 33vw, 100vw" />
+  <a href={lbSrcs[4]} class="glightbox col-span-4 h-80 gallery-item" data-gallery="loft">
+    <Image src={photos[4].src} alt={photos[4].alt} widths={[600,900]} sizes="33vw" />
   </a>
 
-  <!-- Row 6 -->
-  <a href={l13} class="glightbox col-span-2 md:col-span-8 h-56 md:h-80 gallery-item" data-gallery="loft">
-    <Image src={img13} alt="Interior space" widths={[800,1200]} sizes="(min-width:768px) 66vw, 100vw" />
+  <!-- Row 3: Kitchen pair -->
+  <a href={lbSrcs[5]} class="glightbox col-span-6 h-72 gallery-item" data-gallery="loft">
+    <Image src={photos[5].src} alt={photos[5].alt} widths={[700,1000]} sizes="50vw" />
   </a>
-  <a href={l14} class="glightbox col-span-2 md:col-span-4 h-56 md:h-80 gallery-item" data-gallery="loft">
-    <Image src={img14} alt="Interior detail" widths={[600,900]} sizes="(min-width:768px) 33vw, 100vw" />
-  </a>
-
-  <!-- Row 7 -->
-  <a href={l15} class="glightbox col-span-1 md:col-span-3 h-48 md:h-64 gallery-item" data-gallery="loft">
-    <Image src={img15} alt="Detail shot" widths={[400,700]} sizes="(min-width:768px) 25vw, 50vw" />
-  </a>
-  <a href={l16} class="glightbox col-span-1 md:col-span-3 h-48 md:h-64 gallery-item" data-gallery="loft">
-    <Image src={img16} alt="Detail shot" widths={[400,700]} sizes="(min-width:768px) 25vw, 50vw" />
-  </a>
-  <a href={l17} class="glightbox col-span-1 md:col-span-3 h-48 md:h-64 gallery-item" data-gallery="loft">
-    <Image src={img17} alt="Detail shot" widths={[400,700]} sizes="(min-width:768px) 25vw, 50vw" />
-  </a>
-  <a href={l18} class="glightbox col-span-1 md:col-span-3 h-48 md:h-64 gallery-item" data-gallery="loft">
-    <Image src={img18} alt="Detail shot" widths={[400,700]} sizes="(min-width:768px) 25vw, 50vw" />
+  <a href={lbSrcs[6]} class="glightbox col-span-6 h-72 gallery-item" data-gallery="loft">
+    <Image src={photos[6].src} alt={photos[6].alt} widths={[700,1000]} sizes="50vw" />
   </a>
 
-  <!-- Row 8: Full-width -->
-  <a href={l19} class="glightbox col-span-2 md:col-span-12 h-56 md:h-80 gallery-item" data-gallery="loft">
-    <Image src={img19} alt="In-unit washer and dryer" widths={[800,1400,1920]} sizes="100vw" />
+  <!-- Row 4: Bathroom + character + laundry -->
+  <a href={lbSrcs[7]} class="glightbox col-span-4 h-64 gallery-item" data-gallery="loft">
+    <Image src={photos[7].src} alt={photos[7].alt} widths={[500,800]} sizes="33vw" />
+  </a>
+  <a href={lbSrcs[8]} class="glightbox col-span-4 h-64 gallery-item" data-gallery="loft">
+    <Image src={photos[8].src} alt={photos[8].alt} widths={[500,800]} sizes="33vw" />
+  </a>
+  <a href={lbSrcs[9]} class="glightbox col-span-4 h-64 gallery-item" data-gallery="loft">
+    <Image src={photos[9].src} alt={photos[9].alt} widths={[500,800]} sizes="33vw" />
   </a>
 
 </div>
@@ -108,6 +89,10 @@ const [l1,l2,l3,l4,l5,l6,l7,l8,l9,l10,l11,l12,l13,l14,l15,l16,l17,l18,l19] = lbS
 <script>
   import GLightbox from "glightbox";
   import "glightbox/dist/css/glightbox.min.css";
+  import Swiper from "swiper";
+  import { Pagination } from "swiper/modules";
+  import "swiper/css";
+  import "swiper/css/pagination";
 
   GLightbox({
     selector: ".glightbox",
@@ -117,4 +102,29 @@ const [l1,l2,l3,l4,l5,l6,l7,l8,l9,l10,l11,l12,l13,l14,l15,l16,l17,l18,l19] = lbS
     keyboardNavigation: true,
     closeOnOutsideClick: true,
   });
+
+  new Swiper(".gallery-swiper", {
+    modules: [Pagination],
+    loop: true,
+    slidesPerView: 1.15,
+    centeredSlides: true,
+    spaceBetween: 8,
+    pagination: {
+      el: ".gallery-swiper .swiper-pagination",
+      clickable: true,
+    },
+  });
 </script>
+
+<style>
+  .gallery-swiper {
+    padding-bottom: 2rem;
+  }
+  .gallery-swiper .swiper-pagination-bullet {
+    background: #8B7355;
+    opacity: 0.4;
+  }
+  .gallery-swiper .swiper-pagination-bullet-active {
+    opacity: 1;
+  }
+</style>
