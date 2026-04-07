@@ -7,309 +7,252 @@ import heroImg from "../assets/IMG_0312-LoRes.jpg";
 
 <Layout title="The Loft on King Street · Santa Cruz, CA">
 
-  <!-- ═══════════════════════════════════════════
-       HERO
-  ═══════════════════════════════════════════ -->
-  <section>
-    <!-- Full-bleed photo, no overlay -->
-    <div class="w-full h-[78vh] min-h-[480px] overflow-hidden">
-      <Image
-        src={heroImg}
-        alt="The Loft on King Street, Santa Cruz"
-        class="w-full h-full object-cover object-center"
-        loading="eager"
-        widths={[800, 1200, 1920, 2560]}
-        sizes="100vw"
-      />
-    </div>
-
-    <!-- Title block -->
-    <div class="max-w-4xl mx-auto px-6 pt-14 pb-10 text-center">
-      <p class="font-sans text-[10px] tracking-[0.5em] uppercase text-stone-500 mb-5">
-        Santa Cruz, California
-      </p>
-      <h1 class="font-display font-light text-6xl sm:text-7xl md:text-8xl lg:text-9xl leading-[0.9] tracking-wide mb-8 text-charcoal">
-        The Loft<br /><em>on King Street</em>
+  <!-- ── Hero ── -->
+  <div class="hero relative overflow-hidden rounded-3xl mb-8 aspect-square md:aspect-auto md:h-screen md:rounded-none">
+    <Image
+      src={heroImg}
+      alt="The Loft on King Street, Santa Cruz"
+      class="w-full h-full object-cover object-center"
+      loading="eager"
+      widths={[800, 1200, 1920, 2560]}
+      sizes="100vw"
+    />
+    <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.3) 35%, transparent 60%)"></div>
+    <div class="absolute bottom-0 left-0 right-0 p-6 md:p-12 text-white" style="text-shadow: 0 1px 6px rgba(0,0,0,0.5);">
+      <div class="flex flex-wrap items-center gap-2 mb-3">
+        <span class="bg-white/20 backdrop-blur-sm border border-white/30 text-white text-xs font-semibold px-3 py-1 rounded-full">
+          Available July 2026
+        </span>
+        <span class="bg-white/20 backdrop-blur-sm border border-white/30 text-white text-xs font-semibold px-3 py-1 rounded-full">
+          All Utilities Included
+        </span>
+      </div>
+      <h1 class="text-3xl md:text-5xl font-bold leading-tight mb-2">
+        The Loft on King Street
       </h1>
-      <div class="flex items-center justify-center gap-4 mb-10">
-        <div class="h-px w-12 bg-stone-300"></div>
-        <p class="font-sans text-[10px] tracking-[0.4em] uppercase text-stone-500">
-          Private &nbsp;·&nbsp; Renovated &nbsp;·&nbsp; Freestanding
-        </p>
-        <div class="h-px w-12 bg-stone-300"></div>
-      </div>
-      <a
-        href="#about"
-        class="font-sans text-[10px] tracking-[0.35em] uppercase text-charcoal border-b border-charcoal/40 hover:border-charcoal pb-0.5 transition-all duration-300"
-      >
-        Discover the space ↓
-      </a>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════
-       INTRO
-  ═══════════════════════════════════════════ -->
-  <section id="about" class="max-w-3xl mx-auto px-6 py-28 text-center">
-    <p class="font-sans text-[10px] tracking-[0.5em] uppercase text-stone-500 mb-6">
-      Available July 2026
-    </p>
-    <h2 class="font-display font-light text-4xl md:text-5xl leading-tight text-charcoal mb-8">
-      Comfort, privacy, and the<br /><em>best of Santa Cruz</em>
-    </h2>
-    <div class="rule-bronze mb-8"></div>
-    <p class="font-sans text-stone-700 text-base leading-loose max-w-xl mx-auto">
-      A rare find on King Street — a beautifully renovated freestanding loft with soaring
-      ceilings, skylights, and an open floor plan that lives larger than its square footage.
-      Walk to downtown dining, reach the beach in minutes, and come home to your own private
-      unit with all utilities included.
-    </p>
-  </section>
-
-  <!-- ═══════════════════════════════════════════
-       STATS BAR
-  ═══════════════════════════════════════════ -->
-  <div class="border-y border-stone-200">
-    <div class="max-w-4xl mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-4 divide-x divide-stone-200 text-center">
-      <div class="px-4 sm:px-8">
-        <p class="font-display font-light text-4xl sm:text-5xl text-charcoal">1.1<span class="text-2xl">mi</span></p>
-        <p class="font-sans text-[10px] tracking-[0.35em] uppercase text-stone-600 mt-2">To the Beach</p>
-      </div>
-      <div class="px-4 sm:px-8">
-        <p class="font-display font-light text-4xl sm:text-5xl text-charcoal">1.4<span class="text-2xl">mi</span></p>
-        <p class="font-sans text-[10px] tracking-[0.35em] uppercase text-stone-600 mt-2">To UCSC</p>
-      </div>
-      <div class="px-4 sm:px-8 border-t md:border-t-0 border-stone-200">
-        <p class="font-display font-light text-4xl sm:text-5xl text-charcoal">2</p>
-        <p class="font-sans text-[10px] tracking-[0.35em] uppercase text-stone-600 mt-2">Sleeping Areas</p>
-      </div>
-      <div class="px-4 sm:px-8 border-t md:border-t-0 border-stone-200">
-        <p class="font-display font-light text-4xl sm:text-5xl text-charcoal">480<span class="text-2xl">ft²</span></p>
-        <p class="font-sans text-[10px] tracking-[0.35em] uppercase text-stone-600 mt-2">Private Loft</p>
-      </div>
+      <p class="text-white/80 text-sm md:text-lg">King St &nbsp;·&nbsp; Santa Cruz, CA 95060</p>
     </div>
   </div>
 
-  <!-- ═══════════════════════════════════════════
-       RENTAL DETAILS
-  ═══════════════════════════════════════════ -->
-  <section class="max-w-3xl mx-auto px-6 py-24">
-    <div class="text-center mb-14">
-      <p class="font-sans text-[10px] tracking-[0.5em] uppercase text-stone-500 mb-4">Rental Details</p>
-      <h2 class="font-display font-light text-3xl md:text-4xl text-charcoal">The essentials</h2>
+  <!-- ── Stats bar ── -->
+  <div class="flex flex-wrap items-center justify-between gap-4 border border-stone-200 rounded-2xl px-6 py-4 mb-10 bg-white shadow-sm">
+    <div class="flex flex-wrap gap-6 text-sm text-stone-500 divide-x divide-stone-200">
+      <div class="pr-6">
+        <span class="block text-2xl font-bold text-stone-900">$3,395</span>
+        <span>per month</span>
+      </div>
+      <div class="px-6">
+        <span class="block text-2xl font-bold text-stone-900">Loft</span>
+        <span>1 bath</span>
+      </div>
+      <div class="px-6">
+        <span class="block text-2xl font-bold text-stone-900">480</span>
+        <span>sq ft</span>
+      </div>
+      <div class="px-6">
+        <span class="block text-2xl font-bold text-stone-900">12</span>
+        <span>month lease</span>
+      </div>
+    </div>
+    <div class="flex flex-col sm:flex-row gap-3">
+      <a
+        href="tel:+18312752566"
+        class="bg-stone-900 text-white text-sm font-semibold py-2.5 px-5 rounded-xl hover:bg-stone-700 transition-colors text-center"
+      >
+        Call (831) 275-2566
+      </a>
+      <a
+        href="mailto:mattosurf@gmail.com"
+        class="border border-stone-300 text-stone-700 text-sm font-semibold py-2.5 px-5 rounded-xl hover:border-stone-500 transition-colors text-center"
+      >
+        Send Email
+      </a>
+    </div>
+  </div>
+
+  <!-- ── Body: two-column ── -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 mb-16">
+
+    <!-- Left: description -->
+    <div class="lg:col-span-2 space-y-10">
+
+      <section>
+        <p class="text-lg leading-relaxed text-stone-700">
+          A rare find on King Street — a beautifully renovated freestanding loft with soaring
+          ceilings, skylights, and an open floor plan that lives larger than its square footage.
+          Walk to downtown dining, reach the beach in minutes, and come home to your own private
+          unit with all utilities included.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-lg font-semibold mb-3 pb-2 border-b border-stone-200">The Space</h2>
+        <p class="leading-relaxed text-stone-600">
+          High ceilings and abundant natural light give the loft an open, airy feel. Separate
+          sleeping areas upstairs and downstairs offer privacy and flexibility. The renovated
+          kitchen features a full-size gas range with microwave above, and the bathroom includes
+          a deep soaker tub with shower. A private mudroom with in-unit washer and dryer plus
+          ample storage rounds it out. Available unfurnished, with partial furnishing available
+          on request.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-lg font-semibold mb-3 pb-2 border-b border-stone-200">What's Included</h2>
+        <p class="leading-relaxed text-stone-600 mb-4">
+          All utilities are covered — no surprise bills, ever.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          {["⚡ Electricity", "🔥 Gas", "💧 Water", "♨️ Heat", "🗑️ Garbage Pickup"].map(u => (
+            <span class="bg-stone-100 text-stone-700 text-sm font-medium px-3 py-1.5 rounded-full">{u}</span>
+          ))}
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-lg font-semibold mb-3 pb-2 border-b border-stone-200">The Location</h2>
+        <p class="text-stone-600 mb-4 leading-relaxed">
+          On a quiet, tree-lined street — minutes from everything Santa Cruz has to offer.
+        </p>
+        <ul class="space-y-2.5">
+          {[
+            ["1.1 mi", "to the Beach & Boardwalk"],
+            ["1.0 mi", "to downtown Santa Cruz"],
+            ["1.4 mi", "to UCSC"],
+            ["Walking distance", "to cafés, restaurants & shops on Mission St"],
+            ["Easy access", "to Highways 1 and 17"],
+          ].map(([label, detail]) => (
+            <li class="flex gap-3 items-baseline">
+              <span class="font-semibold text-stone-900 text-sm whitespace-nowrap">{label}</span>
+              <span class="text-stone-500 text-sm">{detail}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-lg font-semibold mb-3 pb-2 border-b border-stone-200">Apply</h2>
+        <p class="text-stone-600 text-sm mb-4">Download the rental application to get started.</p>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <a
+            href="/application.pdf"
+            download
+            class="inline-flex items-center gap-2 bg-stone-900 text-white text-sm font-semibold py-2.5 px-5 rounded-xl hover:bg-stone-700 transition-colors"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1M12 12v6m0 0l-3-3m3 3l3-3M12 3v9" />
+            </svg>
+            Download Application
+          </a>
+          <a
+            href="https://www.places4students.com/dashboard/landlord/listings/268822/preview"
+            class="inline-flex items-center gap-2 border border-stone-300 text-stone-700 text-sm font-semibold py-2.5 px-5 rounded-xl hover:border-stone-500 transition-colors"
+          >
+            View on Places4Students
+          </a>
+        </div>
+      </section>
+
     </div>
 
-    <dl class="divide-y divide-stone-200">
-      <div class="flex justify-between items-baseline py-4">
-        <dt class="font-sans text-[10px] tracking-[0.3em] uppercase text-stone-500">Monthly Rent</dt>
-        <dd class="text-right">
-          <span class="font-display text-2xl font-light text-charcoal">$3,395 <span class="font-sans text-sm text-stone-500 tracking-wide">/ month</span></span>
-          <br /><span class="font-sans text-sm text-stone-500">water, electric &amp; gas included</span>
-        </dd>
-      </div>
-      <div class="flex justify-between items-baseline py-4">
-        <dt class="font-sans text-[10px] tracking-[0.3em] uppercase text-stone-500">Available</dt>
-        <dd class="font-display text-2xl font-light text-charcoal">July 1, 2026</dd>
-      </div>
-      <div class="flex justify-between items-baseline py-4">
-        <dt class="font-sans text-[10px] tracking-[0.3em] uppercase text-stone-500">Lease Term</dt>
-        <dd class="font-display text-2xl font-light text-charcoal">1 Year</dd>
-      </div>
-      <div class="flex justify-between items-baseline py-4">
-        <dt class="font-sans text-[10px] tracking-[0.3em] uppercase text-stone-500">Security Deposit</dt>
-        <dd class="font-display text-2xl font-light text-charcoal">$3,395</dd>
-      </div>
-      <div class="flex justify-between items-baseline py-4">
-        <dt class="font-sans text-[10px] tracking-[0.3em] uppercase text-stone-500">Type</dt>
-        <dd class="font-display text-2xl font-light text-charcoal">Loft &nbsp;·&nbsp; <span class="text-xl">1 Bath &nbsp;·&nbsp; ~480 sq ft</span></dd>
-      </div>
-      <div class="flex justify-between items-baseline py-4">
-        <dt class="font-sans text-[10px] tracking-[0.3em] uppercase text-stone-500">Utilities</dt>
-        <dd class="font-sans text-base text-charcoal text-right">Water, electric &amp; gas included<br/><span class="text-stone-500 text-sm">Cable, internet &amp; phone not included</span></dd>
-      </div>
-      <div class="flex justify-between items-baseline py-4">
-        <dt class="font-sans text-[10px] tracking-[0.3em] uppercase text-stone-500">Parking</dt>
-        <dd class="font-sans text-base text-charcoal">Street parking available</dd>
-      </div>
-      <div class="flex justify-between items-baseline py-4">
-        <dt class="font-sans text-[10px] tracking-[0.3em] uppercase text-stone-500">Furnished</dt>
-        <dd class="font-sans text-base text-charcoal text-right">Unfurnished — ready for your personal touch<br/><span class="text-stone-500 text-sm">Partial furnishing available upon request</span></dd>
-      </div>
-      <div class="flex justify-between items-baseline py-4">
-        <dt class="font-sans text-[10px] tracking-[0.3em] uppercase text-stone-500">Pets</dt>
-        <dd class="font-sans text-base text-charcoal">Cats welcome</dd>
-      </div>
-    </dl>
-  </section>
+    <!-- Right: sidebar -->
+    <div class="space-y-5">
 
-  <!-- ═══════════════════════════════════════════
-       AMENITIES
-  ═══════════════════════════════════════════ -->
-  <section class="max-w-5xl mx-auto px-6 py-28">
-    <div class="text-center mb-16">
-      <p class="font-sans text-[10px] tracking-[0.5em] uppercase text-stone-500 mb-4">The Details</p>
-      <h2 class="font-display font-light text-3xl md:text-4xl text-charcoal">Everything you need</h2>
-    </div>
-
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
-
-      <!-- Natural Light -->
-      <div class="text-center">
-        <div class="text-bronze w-8 h-8 mx-auto mb-5">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round">
-            <circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/>
-            <line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/>
-            <line x1="4.93" y1="4.93" x2="7.05" y2="7.05"/><line x1="16.95" y1="16.95" x2="19.07" y2="19.07"/>
-            <line x1="19.07" y1="4.93" x2="16.95" y2="7.05"/><line x1="7.05" y1="16.95" x2="4.93" y2="19.07"/>
-          </svg>
+      <!-- Contact card -->
+      <div class="border border-stone-200 rounded-2xl p-5 shadow-sm bg-white sticky top-6">
+        <p class="text-sm text-stone-500 mb-1">Contact landlord</p>
+        <p class="font-semibold text-stone-900 mb-4">Matthew O'Leary</p>
+        <div class="space-y-3">
+          <a
+            href="tel:+18312752566"
+            class="flex items-center gap-3 bg-stone-900 text-white text-sm font-semibold py-3 px-4 rounded-xl hover:bg-stone-700 transition-colors"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            (831) 275-2566
+          </a>
+          <a
+            href="mailto:mattosurf@gmail.com"
+            class="flex items-center gap-3 border border-stone-300 text-stone-700 text-sm font-semibold py-3 px-4 rounded-xl hover:border-stone-500 transition-colors"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            mattosurf@gmail.com
+          </a>
         </div>
-        <h3 class="font-display text-xl font-light text-charcoal mb-2">High Ceilings &amp; Natural Light</h3>
-        <p class="font-sans text-[15px] text-stone-600 leading-relaxed">Open, airy atmosphere with soaring ceilings and abundant windows throughout.</p>
+        <p class="text-xs text-stone-400 mt-4 text-center">This one won't last — reach out today.</p>
       </div>
 
-      <!-- Beach -->
-      <div class="text-center">
-        <div class="text-bronze w-8 h-8 mx-auto mb-5">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round">
-            <path d="M2 18 C5 14 8 16 12 13 S18 10 22 13"/><path d="M2 22 C5 18 8 20 12 17 S18 14 22 17"/>
-            <path d="M12 3 C12 3 9 7 12 11"/><path d="M12 11 C14 8 17 5 16 3"/>
-          </svg>
-        </div>
-        <h3 class="font-display text-xl font-light text-charcoal mb-2">1.1 Miles to the Beach</h3>
-        <p class="font-sans text-[15px] text-stone-600 leading-relaxed">Beaches, the wharf, and the boardwalk are all just 1.1 miles away.</p>
+      <!-- Property details card -->
+      <div class="border border-stone-200 rounded-2xl p-5 bg-white">
+        <p class="text-sm font-semibold text-stone-900 mb-4">Property Details</p>
+        <dl class="space-y-2.5 text-sm">
+          {[
+            ["Type", "Freestanding Loft"],
+            ["Rent", "$3,395 / month"],
+            ["Deposit", "$3,395"],
+            ["Lease", "12 months"],
+            ["Available", "July 1, 2026"],
+            ["Utilities", "All included"],
+            ["Parking", "Street parking"],
+            ["Pets", "Cats welcome"],
+          ].map(([label, value]) => (
+            <div class="flex justify-between gap-2">
+              <dt class="text-stone-400">{label}</dt>
+              <dd class="font-medium text-stone-700 text-right">{value}</dd>
+            </div>
+          ))}
+        </dl>
       </div>
 
-      <!-- Downtown -->
-      <div class="text-center">
-        <div class="text-bronze w-8 h-8 mx-auto mb-5">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round">
-            <path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/>
-          </svg>
-        </div>
-        <h3 class="font-display text-xl font-light text-charcoal mb-2">Walking Distance to Downtown</h3>
-        <p class="font-sans text-[15px] text-stone-600 leading-relaxed">World-class dining, boutiques, and the best of Santa Cruz just steps away.</p>
-      </div>
-
-      <!-- Sleeping Areas -->
-      <div class="text-center">
-        <div class="text-bronze w-8 h-8 mx-auto mb-5">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round">
-            <path d="M2 9V6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v3"/><path d="M2 20v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5"/>
-            <path d="M2 20h20"/><path d="M2 9h20"/><path d="M7 13v-2"/><path d="M12 13v-2"/><path d="M17 13v-2"/>
-          </svg>
-        </div>
-        <h3 class="font-display text-xl font-light text-charcoal mb-2">Flexible Sleeping Areas</h3>
-        <p class="font-sans text-[15px] text-stone-600 leading-relaxed">Separate sleeping quarters both upstairs and downstairs for privacy and versatility.</p>
-      </div>
-
-      <!-- Bathroom -->
-      <div class="text-center">
-        <div class="text-bronze w-8 h-8 mx-auto mb-5">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round">
-            <path d="M9 6 C9 4.34 7.66 3 6 3 S3 4.34 3 6 V12 H21 V10 C21 8.34 19.66 7 18 7 H9 Z"/>
-            <path d="M3 12 L3 17 C3 19.76 5.24 22 8 22 H16 C18.76 22 21 19.76 21 17 V12"/>
-            <path d="M7 22 L7 24"/><path d="M17 22 L17 24"/>
-          </svg>
-        </div>
-        <h3 class="font-display text-xl font-light text-charcoal mb-2">Renovated Soaker Tub with Shower</h3>
-        <p class="font-sans text-[15px] text-stone-600 leading-relaxed">Newly renovated bathroom featuring a deep soaker tub with shower.</p>
-      </div>
-
-      <!-- Laundry -->
-      <div class="text-center">
-        <div class="text-bronze w-8 h-8 mx-auto mb-5">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round">
-            <rect x="2" y="2" width="20" height="20" rx="2"/>
-            <circle cx="12" cy="13" r="5"/><circle cx="12" cy="13" r="2"/>
-            <line x1="6" y1="6" x2="6" y2="6" stroke-width="2"/><line x1="9" y1="6" x2="9" y2="6" stroke-width="2"/>
-          </svg>
-        </div>
-        <h3 class="font-display text-xl font-light text-charcoal mb-2">In-Unit Washer &amp; Dryer</h3>
-        <p class="font-sans text-[15px] text-stone-600 leading-relaxed">Private mudroom with full-size washer, dryer, and ample storage for beach gear.</p>
-      </div>
-
-      <!-- Private Unit -->
-      <div class="text-center">
-        <div class="text-bronze w-8 h-8 mx-auto mb-5">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round">
-            <path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5z"/>
-            <path d="M9 21V12h6v9"/>
-          </svg>
-        </div>
-        <h3 class="font-display text-xl font-light text-charcoal mb-2">Private Freestanding Unit</h3>
-        <p class="font-sans text-[15px] text-stone-600 leading-relaxed">Enjoy complete privacy in your own separate, standalone home — no shared walls.</p>
-      </div>
-
-      <!-- Patio -->
-      <div class="text-center">
-        <div class="text-bronze w-8 h-8 mx-auto mb-5">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round">
-            <path d="M12 2 C10 5 8 7 8 10 C8 12.21 9.79 14 12 14 C14.21 14 16 12.21 16 10 C16 7 14 5 12 2Z"/>
-            <path d="M12 14 L12 22"/><path d="M9 18 L12 16 L15 18"/>
-          </svg>
-        </div>
-        <h3 class="font-display text-xl font-light text-charcoal mb-2">Shared Patio &amp; Tall Trees</h3>
-        <p class="font-sans text-[15px] text-stone-600 leading-relaxed">A peaceful outdoor space shared with the front house, surrounded by tall trees.</p>
+      <!-- Amenities card -->
+      <div class="border border-stone-200 rounded-2xl p-5 bg-white">
+        <p class="text-sm font-semibold text-stone-900 mb-4">Amenities</p>
+        <ul class="grid grid-cols-2 gap-y-2.5 text-sm text-stone-600">
+          {[
+            "☀️ Skylights",
+            "🏠 High Ceilings",
+            "🛁 Soaker Tub",
+            "🍳 Gas Kitchen",
+            "🫧 Washer/Dryer",
+            "🌿 Shared Patio",
+            "📦 Mudroom",
+            "🐱 Cats OK",
+          ].map(a => <li>{a}</li>)}
+        </ul>
       </div>
 
     </div>
-  </section>
+  </div>
 
-  <!-- ═══════════════════════════════════════════
-       GALLERY
-  ═══════════════════════════════════════════ -->
-  <section class="pb-32">
-    <div class="max-w-4xl mx-auto px-6 mb-14 text-center">
-      <p class="font-sans text-[10px] tracking-[0.5em] uppercase text-stone-500 mb-4">The Space</p>
-      <h2 class="font-display font-light text-3xl md:text-4xl text-charcoal">
-        <em>A closer look</em>
-      </h2>
-      <div class="rule-bronze mt-6"></div>
-    </div>
+  <!-- ── Gallery ── -->
+  <div class="mb-16">
+    <h2 class="text-lg font-semibold mb-6 pb-2 border-b border-stone-200">Photos</h2>
     <Grid />
-  </section>
+  </div>
 
-  <!-- ═══════════════════════════════════════════
-       CTA
-  ═══════════════════════════════════════════ -->
-  <section class="bg-charcoal text-white py-28 px-6 text-center">
-    <p class="font-sans text-[10px] tracking-[0.5em] uppercase text-white/70 mb-6">
-      Ready to apply?
+  <!-- ── Bottom CTA ── -->
+  <div class="mb-8 rounded-3xl bg-stone-900 text-white px-8 py-12 text-center">
+    <h2 class="text-2xl font-bold mb-2">Ready to make it yours?</h2>
+    <p class="text-stone-400 mb-8 max-w-md mx-auto">
+      This freestanding loft won't be on the market long. Get in touch today to schedule a showing.
     </p>
-    <h2 class="font-display font-light text-4xl md:text-5xl lg:text-6xl mb-4">
-      Make it yours.
-    </h2>
-    <p class="font-display italic font-light text-xl text-white/75 mb-14">
-      The Loft on King Street · Santa Cruz, CA
-    </p>
-    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+    <div class="flex flex-col sm:flex-row justify-center gap-4">
       <a
-        href="/application.pdf"
-        class="inline-block px-12 py-4 bg-white text-charcoal font-sans text-[10px] tracking-[0.4em] uppercase hover:bg-stone-100 transition-colors duration-300"
+        href="tel:+18312752566"
+        class="bg-white text-stone-900 font-semibold py-3 px-8 rounded-xl hover:bg-stone-100 transition-colors"
       >
-        Download Application
+        Call (831) 275-2566
       </a>
       <a
-        href="https://www.places4students.com/dashboard/landlord/listings/268822/preview"
-        class="inline-block px-12 py-4 border border-white/25 text-white font-sans text-[10px] tracking-[0.4em] uppercase hover:border-white/60 hover:bg-white/5 transition-all duration-300"
+        href="mailto:mattosurf@gmail.com"
+        class="border border-white/40 text-white font-semibold py-3 px-8 rounded-xl hover:bg-white/10 transition-colors"
       >
-        View on Places4Students
+        Send Email
       </a>
     </div>
-
-    <div class="mt-16 pt-16 border-t border-white/10">
-      <p class="font-sans text-[10px] tracking-[0.4em] uppercase text-white/50 mb-5">Get in touch</p>
-      <p class="font-display italic font-light text-2xl text-white mb-5">Matthew O'Leary</p>
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-8">
-        <a href="tel:8312752566" class="font-sans text-sm text-white/80 hover:text-white transition-colors duration-300 tracking-wide">
-          831-275-2566 <span class="text-white/40 text-xs ml-1">call or text</span>
-        </a>
-        <div class="hidden sm:block h-3 w-px bg-white/20"></div>
-        <a href="mailto:mattosurf@gmail.com" class="font-sans text-sm text-white/80 hover:text-white transition-colors duration-300 tracking-wide">
-          mattosurf@gmail.com
-        </a>
-      </div>
-    </div>
-  </section>
+  </div>
 
 </Layout>

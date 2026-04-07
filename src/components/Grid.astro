@@ -29,61 +29,17 @@ const lbSrcs = await Promise.all(
 );
 ---
 
-<!-- ── Mobile: Swiper carousel ─────────────────────────────── -->
-<div class="md:hidden swiper gallery-swiper overflow-hidden">
+<div class="swiper gallery-swiper overflow-hidden">
   <div class="swiper-wrapper">
     {photos.map((p, i) => (
       <div class="swiper-slide">
         <a href={lbSrcs[i]} class="glightbox block w-full h-72 gallery-item" data-gallery="loft">
-          <Image src={p.src} alt={p.alt} class="w-full h-full object-cover" widths={[600,900]} sizes="100vw" />
+          <Image src={p.src} alt={p.alt} class="w-full h-full object-cover rounded-xl" widths={[600, 900, 1200]} sizes="(max-width: 768px) 100vw, 33vw" />
         </a>
       </div>
     ))}
   </div>
   <div class="swiper-pagination"></div>
-</div>
-
-<!-- ── Desktop: editorial grid ────────────────────────────── -->
-<div class="hidden md:grid md:grid-cols-12 gap-1 px-1">
-
-  <!-- Row 1: Tall windows wide + loft skylights -->
-  <a href={lbSrcs[0]} class="glightbox col-span-8 h-96 gallery-item" data-gallery="loft">
-    <Image src={photos[0].src} alt={photos[0].alt} widths={[800,1200,1800]} sizes="66vw" />
-  </a>
-  <a href={lbSrcs[1]} class="glightbox col-span-4 h-96 gallery-item" data-gallery="loft">
-    <Image src={photos[1].src} alt={photos[1].alt} widths={[600,900]} sizes="33vw" />
-  </a>
-
-  <!-- Row 2: Three loft/living shots -->
-  <a href={lbSrcs[2]} class="glightbox col-span-4 h-80 gallery-item" data-gallery="loft">
-    <Image src={photos[2].src} alt={photos[2].alt} widths={[600,900]} sizes="33vw" />
-  </a>
-  <a href={lbSrcs[3]} class="glightbox col-span-4 h-80 gallery-item" data-gallery="loft">
-    <Image src={photos[3].src} alt={photos[3].alt} widths={[600,900]} sizes="33vw" />
-  </a>
-  <a href={lbSrcs[4]} class="glightbox col-span-4 h-80 gallery-item" data-gallery="loft">
-    <Image src={photos[4].src} alt={photos[4].alt} widths={[600,900]} sizes="33vw" />
-  </a>
-
-  <!-- Row 3: Kitchen pair -->
-  <a href={lbSrcs[5]} class="glightbox col-span-6 h-72 gallery-item" data-gallery="loft">
-    <Image src={photos[5].src} alt={photos[5].alt} widths={[700,1000]} sizes="50vw" />
-  </a>
-  <a href={lbSrcs[6]} class="glightbox col-span-6 h-72 gallery-item" data-gallery="loft">
-    <Image src={photos[6].src} alt={photos[6].alt} widths={[700,1000]} sizes="50vw" />
-  </a>
-
-  <!-- Row 4: Bathroom + character + laundry -->
-  <a href={lbSrcs[7]} class="glightbox col-span-4 h-64 gallery-item" data-gallery="loft">
-    <Image src={photos[7].src} alt={photos[7].alt} widths={[500,800]} sizes="33vw" />
-  </a>
-  <a href={lbSrcs[8]} class="glightbox col-span-4 h-64 gallery-item" data-gallery="loft">
-    <Image src={photos[8].src} alt={photos[8].alt} widths={[500,800]} sizes="33vw" />
-  </a>
-  <a href={lbSrcs[9]} class="glightbox col-span-4 h-64 gallery-item" data-gallery="loft">
-    <Image src={photos[9].src} alt={photos[9].alt} widths={[500,800]} sizes="33vw" />
-  </a>
-
 </div>
 
 <script>
@@ -106,9 +62,13 @@ const lbSrcs = await Promise.all(
   new Swiper(".gallery-swiper", {
     modules: [Pagination],
     loop: true,
-    slidesPerView: 1.15,
-    centeredSlides: true,
-    spaceBetween: 8,
+    spaceBetween: 12,
+    slidesPerView: 1.2,
+    centeredSlides: false,
+    breakpoints: {
+      640: { slidesPerView: 2.2 },
+      1024: { slidesPerView: 3.2 },
+    },
     pagination: {
       el: ".gallery-swiper .swiper-pagination",
       clickable: true,
@@ -118,13 +78,13 @@ const lbSrcs = await Promise.all(
 
 <style>
   .gallery-swiper {
-    padding-bottom: 2rem;
+    padding-bottom: 2.5rem;
   }
   .gallery-swiper .swiper-pagination-bullet {
-    background: #8B7355;
-    opacity: 0.4;
+    background: #1c1917;
+    opacity: 0.3;
   }
   .gallery-swiper .swiper-pagination-bullet-active {
-    opacity: 1;
+    opacity: 0.8;
   }
 </style>

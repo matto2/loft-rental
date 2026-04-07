@@ -3,16 +3,26 @@
 @tailwind utilities;
 
 body {
-  background-color: #F8F5F0;
-  color: #1C1C1C;
+  background-color: #fafaf9;
+  color: #44403c;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
 }
 
-/* Smooth scroll */
 html {
   scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.02em;
+}
+
+/* Break hero out of max-width container on desktop */
+@media (min-width: 768px) {
+  .hero {
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
 }
 
 /* Gallery image zoom on hover */
@@ -29,12 +39,4 @@ html {
 }
 .gallery-item:hover img {
   transform: scale(1.06);
-}
-
-/* Thin horizontal rule accent */
-.rule-bronze {
-  width: 4rem;
-  height: 1px;
-  background-color: #8B7355;
-  margin: 0 auto;
 }
