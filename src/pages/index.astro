@@ -86,21 +86,35 @@ import heroImg from "../assets/IMG_0312-LoRes.jpg";
       </section>
 
       <section>
+        <h2 class="text-lg font-semibold mb-3 pb-2 border-b border-stone-200">Ideal For</h2>
+        <ul class="space-y-2 text-stone-600 text-sm">
+          <li class="flex gap-2"><span class="text-stone-400">—</span><span>1–2 students or tenants sharing a flexible loft layout</span></li>
+          <li class="flex gap-2"><span class="text-stone-400">—</span><span>A private, freestanding unit — not part of a shared house</span></li>
+          <li class="flex gap-2"><span class="text-stone-400">—</span><span>Anyone wanting a simple all-in monthly cost with no bills to set up or split</span></li>
+        </ul>
+      </section>
+
+      <section>
         <h2 class="text-lg font-semibold mb-3 pb-2 border-b border-stone-200">The Space</h2>
-        <p class="leading-relaxed text-stone-600">
-          High ceilings and abundant natural light give the loft an open, airy feel. Separate
-          sleeping areas upstairs and downstairs offer privacy and flexibility. The renovated
-          kitchen features a full-size gas range with microwave above, and the bathroom includes
-          a deep soaker tub with shower. A private mudroom with in-unit washer and dryer plus
-          ample storage rounds it out. Available unfurnished, with partial furnishing available
-          on request.
+        <p class="leading-relaxed text-stone-600 mb-4">
+          High ceilings and skylights give the loft an open, airy feel. The layout has two
+          distinct areas: an upstairs loft sleeping area and a separate downstairs space that
+          works well as a second bedroom, office, or living room — flexible for roommates or
+          solo use.
         </p>
+        <ul class="space-y-2 text-stone-600 text-sm">
+          <li class="flex gap-2"><span class="text-stone-400">—</span><span>Renovated kitchen with full-size gas range and overhead microwave</span></li>
+          <li class="flex gap-2"><span class="text-stone-400">—</span><span>Bathroom with deep soaker tub and shower</span></li>
+          <li class="flex gap-2"><span class="text-stone-400">—</span><span>Private mudroom with in-unit washer and dryer</span></li>
+          <li class="flex gap-2"><span class="text-stone-400">—</span><span>Ample storage throughout</span></li>
+          <li class="flex gap-2"><span class="text-stone-400">—</span><span>Available unfurnished — partial furnishing available on request</span></li>
+        </ul>
       </section>
 
       <section>
         <h2 class="text-lg font-semibold mb-3 pb-2 border-b border-stone-200">What's Included</h2>
         <p class="leading-relaxed text-stone-600 mb-4">
-          All utilities are covered — no surprise bills, ever.
+          All utilities are covered — no accounts to set up, no bills to split. One predictable monthly payment.
         </p>
         <div class="flex flex-wrap gap-2">
           {["⚡ Electricity", "🔥 Gas", "💧 Water", "♨️ Heat", "🗑️ Garbage Pickup"].map(u => (
@@ -110,15 +124,28 @@ import heroImg from "../assets/IMG_0312-LoRes.jpg";
       </section>
 
       <section>
+        <h2 class="text-lg font-semibold mb-3 pb-2 border-b border-stone-200">Why It Works for Students</h2>
+        <ul class="space-y-2.5 text-stone-600 text-sm">
+          <li class="flex gap-2"><span class="text-stone-400">—</span><span>Close to UCSC — ~5–10 min drive, or a quick ride via Mission St</span></li>
+          <li class="flex gap-2"><span class="text-stone-400">—</span><span>Walkable to cafés, restaurants, and groceries on Mission St</span></li>
+          <li class="flex gap-2"><span class="text-stone-400">—</span><span>Downtown Santa Cruz about a mile away</span></li>
+          <li class="flex gap-2"><span class="text-stone-400">—</span><span>Private freestanding unit — your own space, not part of a shared house</span></li>
+          <li class="flex gap-2"><span class="text-stone-400">—</span><span>In-unit washer and dryer — no shared laundry</span></li>
+          <li class="flex gap-2"><span class="text-stone-400">—</span><span>Flexible two-area layout works well for roommates</span></li>
+          <li class="flex gap-2"><span class="text-stone-400">—</span><span>All utilities included — simplify your monthly budget</span></li>
+        </ul>
+      </section>
+
+      <section>
         <h2 class="text-lg font-semibold mb-3 pb-2 border-b border-stone-200">The Location</h2>
         <p class="text-stone-600 mb-4 leading-relaxed">
           On a quiet, tree-lined street — minutes from everything Santa Cruz has to offer.
         </p>
-        <ul class="space-y-2.5">
+        <ul class="space-y-2.5 mb-6">
           {[
             ["1.1 mi", "to the Beach & Boardwalk"],
             ["1.0 mi", "to downtown Santa Cruz"],
-            ["1.4 mi", "to UCSC"],
+            ["1.4 mi", "to UCSC (~5–10 min drive, bike-friendly via Mission St)"],
             ["Walking distance", "to cafés, restaurants & shops on Mission St"],
             ["Easy access", "to Highways 1 and 17"],
           ].map(([label, detail]) => (
@@ -128,11 +155,19 @@ import heroImg from "../assets/IMG_0312-LoRes.jpg";
             </li>
           ))}
         </ul>
+        <div class="p-4 bg-stone-50 rounded-xl text-sm text-stone-600">
+          <p class="font-semibold text-stone-800 mb-2">Parking</p>
+          <ul class="space-y-1.5">
+            <li class="flex gap-2"><span class="text-stone-400">—</span><span>Street parking available on the block</span></li>
+            <li class="flex gap-2"><span class="text-stone-400">—</span><span>Permit-free spots on the intersecting street directly across from the unit</span></li>
+            <li class="flex gap-2"><span class="text-stone-400">—</span><span>Westside residential permit easy to obtain if needed</span></li>
+          </ul>
+        </div>
       </section>
 
       <section>
         <h2 class="text-lg font-semibold mb-3 pb-2 border-b border-stone-200">Apply</h2>
-        <p class="text-stone-600 text-sm mb-4">Download the rental application to get started.</p>
+        <p class="text-stone-600 text-sm mb-4">Download the rental application to get started. Reach out to schedule a showing or ask any questions.</p>
         <div class="flex flex-col sm:flex-row gap-3">
           <a
             href="/application.pdf"
@@ -182,7 +217,7 @@ import heroImg from "../assets/IMG_0312-LoRes.jpg";
             mattosurf@gmail.com
           </a>
         </div>
-        <p class="text-xs text-stone-400 mt-4 text-center">This one won't last — reach out today.</p>
+        <p class="text-xs text-stone-400 mt-4 text-center">Rare private unit — reach out to schedule a showing.</p>
       </div>
 
       <!-- Property details card -->
@@ -196,7 +231,7 @@ import heroImg from "../assets/IMG_0312-LoRes.jpg";
             ["Lease", "12 months"],
             ["Available", "July 1, 2026"],
             ["Utilities", "All included"],
-            ["Parking", "Street parking"],
+            ["Parking", "Street (permit-free nearby)"],
             ["Pets", "Cats welcome"],
           ].map(([label, value]) => (
             <div class="flex justify-between gap-2">
@@ -235,9 +270,9 @@ import heroImg from "../assets/IMG_0312-LoRes.jpg";
 
   <!-- ── Bottom CTA ── -->
   <div class="mb-8 rounded-3xl bg-stone-900 text-white px-8 py-12 text-center">
-    <h2 class="text-2xl font-bold mb-2">Ready to make it yours?</h2>
+    <h2 class="text-2xl font-bold mb-2">A rare private unit — typically rents quickly.</h2>
     <p class="text-stone-400 mb-8 max-w-md mx-auto">
-      This freestanding loft won't be on the market long. Get in touch today to schedule a showing.
+      Freestanding, utilities included, and close to campus. Reach out to schedule a showing or ask questions.
     </p>
     <div class="flex flex-col sm:flex-row justify-center gap-4">
       <a
