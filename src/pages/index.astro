@@ -2,7 +2,7 @@
 import { Image } from "astro:assets";
 import Layout from "../layouts/MyLayout.astro";
 import Grid from "../components/Grid.astro";
-import heroImg from "../assets/IMG_0312-LoRes.jpg";
+import heroImg from "../assets/IMG_0273.jpeg";
 ---
 
 <Layout title="The Loft on King Street · Santa Cruz, CA">
@@ -78,8 +78,17 @@ import heroImg from "../assets/IMG_0312-LoRes.jpg";
           A rare find on King Street — a beautifully renovated freestanding loft with soaring
           ceilings, skylights, and an open floor plan that lives larger than its square footage.
           Walk to downtown dining, reach the beach in minutes, and come home to your own private
-          unit.
+          unit with all utilities included.
         </p>
+        <a
+          href="https://www.airbnb.com/rooms/7092117"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex flex-col items-start gap-1.5 mt-4 bg-pink-500 hover:bg-pink-600 transition-colors text-white font-semibold px-5 py-3 rounded-xl"
+        >
+          <span class="flex gap-0.5 text-yellow-300 text-lg leading-none">★★★★★</span>
+          <span class="text-base">See verified guest reviews on our Airbnb listing →</span>
+        </a>
       </section>
 
       <section>
@@ -87,7 +96,7 @@ import heroImg from "../assets/IMG_0312-LoRes.jpg";
         <ul class="space-y-2 text-stone-600 text-sm">
           <li class="flex gap-2"><span class="text-stone-400">—</span><span>1–2 students or tenants sharing a flexible loft layout</span></li>
           <li class="flex gap-2"><span class="text-stone-400">—</span><span>A private, freestanding unit — not part of a shared house</span></li>
-          <li class="flex gap-2"><span class="text-stone-400">—</span><span>Anyone wanting a simple, predictable monthly cost</span></li>
+          <li class="flex gap-2"><span class="text-stone-400">—</span><span>Anyone wanting a simple all-in monthly cost with no bills to set up or split</span></li>
         </ul>
       </section>
 
@@ -111,10 +120,10 @@ import heroImg from "../assets/IMG_0312-LoRes.jpg";
       <section>
         <h2 class="text-lg font-semibold mb-3 pb-2 border-b border-stone-200">What's Included</h2>
         <p class="leading-relaxed text-stone-600 mb-4">
-          Water and garbage are covered by the owner. PG&amp;E (electricity and gas) stays in the owner's name — tenants receive a monthly bill for their share. No accounts to open or manage.
+          All utilities are covered — no accounts to set up, no bills to split. One predictable monthly payment.
         </p>
         <div class="flex flex-wrap gap-2">
-          {["💧 Water (owner)", "🗑️ Garbage (owner)", "⚡ Electricity (split)", "🔥 Gas (split)"].map(u => (
+          {["⚡ Electricity", "🔥 Gas", "💧 Water", "♨️ Heat", "🗑️ Garbage Pickup"].map(u => (
             <span class="bg-stone-100 text-stone-700 text-sm font-medium px-3 py-1.5 rounded-full">{u}</span>
           ))}
         </div>
@@ -129,7 +138,7 @@ import heroImg from "../assets/IMG_0312-LoRes.jpg";
           <li class="flex gap-2"><span class="text-stone-400">—</span><span>Private freestanding unit — your own space, not part of a shared house</span></li>
           <li class="flex gap-2"><span class="text-stone-400">—</span><span>In-unit washer and dryer — no shared laundry</span></li>
           <li class="flex gap-2"><span class="text-stone-400">—</span><span>Flexible two-area layout works well for roommates</span></li>
-          <li class="flex gap-2"><span class="text-stone-400">—</span><span>Water and garbage covered by owner; PG&amp;E billed monthly — no accounts to set up</span></li>
+          <li class="flex gap-2"><span class="text-stone-400">—</span><span>All utilities included — simplify your monthly budget</span></li>
         </ul>
       </section>
 
@@ -193,7 +202,18 @@ import heroImg from "../assets/IMG_0312-LoRes.jpg";
       <!-- Contact card -->
       <div class="border border-stone-200 rounded-2xl p-5 shadow-sm bg-white sticky top-6">
         <p class="text-sm text-stone-500 mb-1">Contact landlord</p>
-        <p class="font-semibold text-stone-900 mb-4">Matthew O'Leary</p>
+        <p class="font-semibold text-stone-900 mb-1">Matthew O'Leary</p>
+        <a
+          href="https://linkedin.com/in/matt-oleary/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-1.5 text-xs text-blue-600 hover:text-blue-800 transition-colors mb-4"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+          LinkedIn
+        </a>
         <div class="space-y-3">
           <a
             href="tel:+18312752566"
@@ -227,7 +247,7 @@ import heroImg from "../assets/IMG_0312-LoRes.jpg";
             ["Deposit", "$2,900"],
             ["Lease", "12 months"],
             ["Available", "July 1, 2026"],
-            ["Utilities", "Water/garbage incl; PG&E split"],
+            ["Utilities", "All included"],
             ["Parking", "Street (permit-free nearby)"],
             ["Pets", "Cats welcome"],
           ].map(([label, value]) => (
@@ -269,7 +289,7 @@ import heroImg from "../assets/IMG_0312-LoRes.jpg";
   <div class="mb-8 rounded-3xl bg-stone-900 text-white px-8 py-12 text-center">
     <h2 class="text-2xl font-bold mb-2">A rare private unit — typically rents quickly.</h2>
     <p class="text-stone-400 mb-8 max-w-md mx-auto">
-      Freestanding, private unit close to campus. Reach out to schedule a showing or ask questions.
+      Freestanding, utilities included, and close to campus. Reach out to schedule a showing or ask questions.
     </p>
     <div class="flex flex-col sm:flex-row justify-center gap-4">
       <a
